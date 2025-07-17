@@ -27,86 +27,33 @@
             padding: 0 22px;
         }
 
-        /* Tab Navigation */
-        .tab-nav {
-            display: flex;
-            justify-content: center;
-            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
-            border: 1px solid #424245;
-            border-radius: 12px;
-            padding: 8px;
-            margin: 40px 0;
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-        }
-
-        .tab-button {
-            flex: 1;
-            padding: 12px 24px;
-            background: transparent;
-            border: none;
-            color: #a1a1aa;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .tab-button.active {
-            background: linear-gradient(135deg, #007aff, #5856d6);
-            color: white;
-            box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
-        }
-
-        .tab-button:hover:not(.active) {
-            background: rgba(255, 255, 255, 0.05);
-            color: #f5f5f7;
-        }
-
-        /* Content Sections */
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         /* Header Section */
         .header {
             text-align: center;
-            padding: 80px 0 40px;
+            padding: 120px 0 80px;
             border-bottom: 1px solid #1d1d1f;
         }
 
         .app-icon {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             background: linear-gradient(135deg, #007aff, #5856d6);
-            border-radius: 18px;
+            border-radius: 22px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
-            font-size: 32px;
+            margin-bottom: 32px;
+            font-size: 40px;
             color: white;
             font-weight: 600;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
         }
 
         h1 {
-            font-size: 56px;
+            font-size: 64px;
             font-weight: 600;
             letter-spacing: -0.005em;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
             background: linear-gradient(135deg, #f5f5f7, #a1a1aa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -114,232 +61,150 @@
         }
 
         .subtitle {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 400;
             color: #a1a1aa;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
 
-        .last-updated {
-            font-size: 17px;
+        .description {
+            font-size: 19px;
             color: #86868b;
             font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Main Content */
-        .content {
-            padding: 60px 0;
+        /* Navigation Cards */
+        .nav-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+            padding: 80px 0;
         }
 
-        .overview {
+        .nav-card {
             background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
             border: 1px solid #424245;
-            border-radius: 18px;
+            border-radius: 24px;
             padding: 48px;
-            margin-bottom: 80px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .overview::before {
+        .nav-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #007aff, transparent);
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
         }
 
-        .overview h2 {
-            font-size: 32px;
-            font-weight: 600;
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-color);
+        }
+
+        .nav-card.privacy {
+            --accent-color: #007aff;
+        }
+
+        .nav-card.terms {
+            --accent-color: #34c759;
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 24px;
-            color: #f5f5f7;
+            font-size: 24px;
+            color: white;
+            opacity: 0.9;
         }
 
-        .overview p {
-            font-size: 19px;
-            line-height: 1.5;
-            color: #a1a1aa;
-            margin-bottom: 16px;
-        }
-
-        .overview .highlight {
-            background: rgba(0, 122, 255, 0.1);
-            border: 1px solid rgba(0, 122, 255, 0.2);
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 24px;
-        }
-
-        .overview .highlight p {
-            color: #64d2ff;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        /* Section Styling */
-        .section {
-            margin-bottom: 80px;
-        }
-
-        h2 {
-            font-size: 40px;
+        .card-title {
+            font-size: 28px;
             font-weight: 600;
-            letter-spacing: -0.005em;
-            margin-bottom: 32px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #424245;
+            margin-bottom: 16px;
             color: #f5f5f7;
         }
 
-        h3 {
+        .card-description {
+            font-size: 17px;
+            color: #a1a1aa;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-card:hover .card-link::after {
+            transform: translateX(4px);
+        }
+
+        /* Quick Links */
+        .quick-links {
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0 80px;
+            text-align: center;
+        }
+
+        .quick-links h2 {
             font-size: 24px;
             font-weight: 600;
-            margin: 40px 0 20px;
-            color: #f5f5f7;
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.6;
-            color: #a1a1aa;
-            margin-bottom: 20px;
-        }
-
-        /* Lists */
-        ul, ol {
-            margin: 24px 0;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        ol {
-            padding-left: 24px;
-        }
-
-        li {
-            position: relative;
-            padding: 12px 0 12px 32px;
-            font-size: 17px;
-            line-height: 1.5;
-            color: #a1a1aa;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        ul li {
-            padding-left: 32px;
-        }
-
-        ol li {
-            padding-left: 8px;
-        }
-
-        li:last-child {
-            border-bottom: none;
-        }
-
-        ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 20px;
-            width: 6px;
-            height: 6px;
-            background: #007aff;
-            border-radius: 50%;
-        }
-
-        li strong {
-            color: #f5f5f7;
-            font-weight: 600;
-        }
-
-        /* Highlight Boxes */
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(255, 149, 0, 0.1), rgba(255, 214, 10, 0.1));
-            border: 1px solid rgba(255, 149, 0, 0.2);
-            border-radius: 16px;
-            padding: 32px;
-            margin: 32px 0;
-        }
-
-        .highlight-box p,
-        .highlight-box li {
-            color: #ffb340;
-        }
-
-        .highlight-box strong {
-            color: #ffd60a;
-        }
-
-        .no-share-box {
-            background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(48, 209, 88, 0.1));
-            border: 1px solid rgba(52, 199, 89, 0.2);
-            border-radius: 16px;
-            padding: 32px;
-            margin: 32px 0;
-        }
-
-        .no-share-box p,
-        .no-share-box li {
-            color: #32d74b;
-        }
-
-        .no-share-box strong {
-            color: #30d158;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
-            border: 1px solid #424245;
-            border-radius: 18px;
-            padding: 48px;
-            text-align: center;
-            margin: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #34c759, transparent);
-        }
-
-        .contact h2 {
-            border: none;
             margin-bottom: 24px;
-            padding: 0;
+            color: #f5f5f7;
         }
 
-        .contact p {
-            margin-bottom: 16px;
+        .quick-links-grid {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
         }
 
-        .contact strong {
-            color: #34c759;
-        }
-
-        /* Links */
-        a {
-            color: #64d2ff;
+        .quick-link {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             text-decoration: none;
+            color: #a1a1aa;
             font-weight: 500;
-            transition: color 0.2s ease;
+            transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
-        a:hover {
-            color: #007aff;
-            text-decoration: underline;
+        .quick-link:hover {
+            background: rgba(0, 122, 255, 0.1);
+            border-color: #007aff;
+            color: #64d2ff;
         }
 
         /* Footer */
@@ -361,6 +226,12 @@
         .footer a {
             color: #64d2ff;
             font-weight: 500;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #007aff;
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -369,51 +240,45 @@
                 padding: 0 16px;
             }
 
+            .header {
+                padding: 80px 0 60px;
+            }
+
             h1 {
-                font-size: 40px;
+                font-size: 48px;
             }
 
             .subtitle {
-                font-size: 20px;
+                font-size: 24px;
             }
 
-            h2 {
-                font-size: 28px;
+            .nav-cards {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 60px 0;
             }
 
-            h3 {
-                font-size: 20px;
+            .nav-card {
+                padding: 32px;
             }
 
-            .overview,
-            .contact {
+            .card-title {
+                font-size: 24px;
+            }
+
+            .quick-links {
                 padding: 32px 24px;
             }
 
-            .highlight-box,
-            .no-share-box {
-                padding: 24px;
+            .quick-links-grid {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .header {
-                padding: 60px 0 40px;
-            }
-
-            .content {
-                padding: 40px 0;
-            }
-
-            .section {
-                margin-bottom: 60px;
-            }
-
-            .tab-nav {
-                margin: 20px 0;
-            }
-
-            .tab-button {
-                padding: 10px 16px;
-                font-size: 14px;
+            .quick-link {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
             }
         }
 
@@ -427,6 +292,26 @@
             background: rgba(0, 122, 255, 0.3);
             color: #f5f5f7;
         }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .nav-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
     </style>
 </head>
 <body>
@@ -435,313 +320,53 @@
             <div class="app-icon">📱</div>
             <h1>Legal Information</h1>
             <p class="subtitle">SnipShot - Screenshot Manager</p>
-            <p class="last-updated">Last Updated: July 17, 2025</p>
+            <p class="description">
+                Access our privacy policy and terms of service to understand how we protect your data and govern the use of our app.
+            </p>
         </div>
 
-        <!-- Tab Navigation -->
-        <div class="tab-nav">
-            <button class="tab-button active" onclick="showTab('privacy')">Privacy Policy</button>
-            <button class="tab-button" onclick="showTab('terms')">Terms of Service</button>
+        <div class="nav-cards">
+            <a href="privacy.html" class="nav-card privacy">
+                <div class="card-icon">🔒</div>
+                <h2 class="card-title">Privacy Policy</h2>
+                <p class="card-description">
+                    Learn how we collect, use, and protect your information. We process your screenshots locally and only send text (never images) to AI services when you choose to use enhancement features.
+                </p>
+                <span class="card-link">Read Privacy Policy</span>
+            </a>
+
+            <a href="terms.html" class="nav-card terms">
+                <div class="card-icon">📋</div>
+                <h2 class="card-title">Terms of Service</h2>
+                <p class="card-description">
+                    Understand your rights and obligations when using SnipShot. Includes subscription terms, user guidelines, and information about our 50 free screenshot trial.
+                </p>
+                <span class="card-link">Read Terms of Service</span>
+            </a>
         </div>
 
-        <!-- Privacy Policy Tab -->
-        <div id="privacy" class="tab-content active">
-            <div class="content">
-                <div class="overview">
-                    <h2>Privacy Policy Overview</h2>
-                    <p>SnipShot is committed to protecting your privacy. This Privacy Policy explains how our mobile application collects, uses, and protects your information.</p>
-                    
-                    <div class="highlight">
-                        <p><strong>The Short Version:</strong> We process your screenshots locally on your device. When you use our AI text enhancement feature, we send only the extracted text (not images) to OpenAI for processing. We don't store your data on our servers, and we don't share your personal information with anyone.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2>Information We Collect</h2>
-
-                    <h3>Data Processed Locally on Your Device</h3>
-                    <ul>
-                        <li><strong>Screenshot Images:</strong> Accessed only to identify and process screenshots from your photo library</li>
-                        <li><strong>Extracted Text:</strong> Text content extracted from your screenshots using on-device processing</li>
-                        <li><strong>App Usage Data:</strong> Information about how you use the app (categories created, searches performed)</li>
-                        <li><strong>App Preferences:</strong> Your settings and preferences within the app</li>
-                    </ul>
-
-                    <h3>Data Sent to Third Parties</h3>
-                    <div class="highlight-box">
-                        <p><strong>Text Content Only:</strong> When you use our AI text enhancement feature, we send the extracted text content (not the images) to OpenAI's API for processing and improvement</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2>How We Use Your Information</h2>
-
-                    <h3>Local Processing</h3>
-                    <ul>
-                        <li>Extract and organize text from your screenshots</li>
-                        <li>Categorize screenshots automatically using AI</li>
-                        <li>Provide search functionality across your organized content</li>
-                        <li>Enable custom category creation and management</li>
-                        <li>Generate PDF exports of your organized collections</li>
-                    </ul>
-
-                    <h3>AI Text Enhancement</h3>
-                    <ul>
-                        <li>Send extracted text to OpenAI to improve text quality and accuracy</li>
-                        <li>Receive enhanced text back to your device</li>
-                        <li>This feature is entirely optional and can be disabled at any time</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>Data Storage and Security</h2>
-
-                    <h3>Local Storage</h3>
-                    <ul>
-                        <li>All your screenshots, extracted text, and organized data are stored locally on your device</li>
-                        <li>We use iOS's built-in security and encryption features to protect your data</li>
-                        <li>Your data is only accessible to you and the SnipShot app</li>
-                    </ul>
-
-                    <div class="no-share-box">
-                        <h3>No Server Storage</h3>
-                        <ul>
-                            <li><strong>We do not operate any servers that store your personal data</strong></li>
-                            <li><strong>We do not backup your data to any cloud services</strong></li>
-                            <li><strong>We do not have access to your screenshots or extracted text</strong></li>
-                        </ul>
-                    </div>
-
-                    <h3>Third-Party Processing</h3>
-                    <ul>
-                        <li>When using AI enhancement, text is sent to OpenAI temporarily for processing only</li>
-                        <li>OpenAI processes the text according to their privacy policy and terms of service</li>
-                        <li>No images are ever sent to third parties - only text content</li>
-                        <li>Enhanced text is returned to your device and we retain no copies</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>Information Sharing</h2>
-
-                    <div class="no-share-box">
-                        <h3>We Do NOT Share</h3>
-                        <ul>
-                            <li>Your screenshot images</li>
-                            <li>Your personal photos</li>
-                            <li>Your contact information</li>
-                            <li>Your device information</li>
-                            <li>Your location data</li>
-                            <li>Your usage patterns</li>
-                        </ul>
-                    </div>
-
-                    <h3>Limited Third-Party Sharing</h3>
-                    <ul>
-                        <li><strong>OpenAI API:</strong> Only extracted text content when you use the AI enhancement feature</li>
-                        <li><strong>Purpose:</strong> Text processing and improvement only</li>
-                        <li><strong>Duration:</strong> Temporary processing - no long-term storage by us</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>Your Privacy Rights and Choices</h2>
-
-                    <h3>Complete Control</h3>
-                    <ul>
-                        <li><strong>Disable AI Enhancement:</strong> You can turn off AI text enhancement at any time</li>
-                        <li><strong>Delete Your Data:</strong> Uninstall the app to permanently delete all associated data</li>
-                        <li><strong>Photo Access:</strong> Control our access to your photos through iOS Settings</li>
-                        <li><strong>Offline Usage:</strong> The app works fully without AI enhancement features</li>
-                    </ul>
-
-                    <h3>No Account Required</h3>
-                    <ul>
-                        <li>SnipShot does not require you to create an account</li>
-                        <li>No email addresses, usernames, or passwords are collected</li>
-                        <li>No user profiles or tracking across devices</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>Children's Privacy</h2>
-                    <p>SnipShot does not knowingly collect personal information from children under 13. The app is designed for general use and does not target children specifically.</p>
-                </div>
-
-                <div class="section">
-                    <h2>Changes to This Privacy Policy</h2>
-                    <p>We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date at the top of this policy. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-                </div>
-
-                <div class="section">
-                    <h2>Third-Party Services</h2>
-
-                    <h3>OpenAI</h3>
-                    <p>When you use our AI text enhancement feature, your extracted text is processed by OpenAI. Please review OpenAI's privacy policy at <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a> for information about how they handle data.</p>
-
-                    <h3>Apple iOS</h3>
-                    <p>SnipShot uses standard iOS frameworks and APIs. Apple's privacy policy governs their data practices: <a href="https://www.apple.com/privacy" target="_blank">https://www.apple.com/privacy</a></p>
-                </div>
-
-                <div class="section">
-                    <h2>Data Protection Rights</h2>
-                    <p>Depending on your location, you may have certain rights regarding your personal data:</p>
-                    <ul>
-                        <li><strong>Access:</strong> You can access your data anytime within the app</li>
-                        <li><strong>Deletion:</strong> Delete all data by uninstalling the app</li>
-                        <li><strong>Portability:</strong> Export your organized data as PDF files</li>
-                        <li><strong>Control:</strong> Manage photo access permissions through iOS Settings</li>
-                    </ul>
-                </div>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="quick-links-grid">
+                <a href="https://snipshot.carrd.co" class="quick-link" target="_blank">Main Website</a>
+                <a href="mailto:boykingamedev@gmail.com" class="quick-link">Contact Support</a>
+                <a href="https://apps.apple.com/app/snipshot" class="quick-link" target="_blank">Download App</a>
             </div>
-        </div>
-
-        <!-- Terms of Service Tab -->
-        <div id="terms" class="tab-content">
-            <div class="content">
-                <div class="overview">
-                    <h2>Terms of Service Overview</h2>
-                    <p>These Terms of Service govern your use of SnipShot. By using our app, you agree to these terms.</p>
-                    
-                    <div class="highlight">
-                        <p><strong>The Short Version:</strong> Use our app responsibly, respect others' intellectual property, and understand that our subscription terms follow Apple's standard practices. We're here to help you organize your screenshots, not to cause any hassle.</p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2>1. Acceptance of Terms</h2>
-                    <p>By downloading, installing, or using SnipShot ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
-                </div>
-
-                <div class="section">
-                    <h2>2. Description of Service</h2>
-                    <p>SnipShot is a mobile application that helps users organize, categorize, and search their screenshots using AI-powered features. The App provides screenshot organization, text extraction, and search capabilities.</p>
-                </div>
-
-                <div class="section">
-                    <h2>3. Subscription Terms</h2>
-
-                    <h3>Auto-Renewable Subscriptions</h3>
-                    <ul>
-                        <li><strong>Monthly Subscription:</strong> $2.99/month (or current App Store price)</li>
-                        <li><strong>Lifetime Purchase:</strong> $29.99 one-time (or current App Store price)</li>
-                        <li>Payment will be charged to your iTunes Account at confirmation of purchase</li>
-                        <li>Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period</li>
-                        <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
-                        <li>You can manage and cancel your subscriptions by going to your account settings on the App Store after purchase</li>
-                    </ul>
-
-                    <h3>Free Trial</h3>
-                    <div class="highlight-box">
-                        <ul>
-                            <li><strong>New users receive 50 free screenshot processing uses</strong></li>
-                            <li><strong>After free uses are exhausted, subscription is required for continued use</strong></li>
-                            <li><strong>No charges during free trial period</strong></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2>4. User Obligations</h2>
-                    <p>You agree to:</p>
-                    <ul>
-                        <li>Use the App only for lawful purposes</li>
-                        <li>Not attempt to reverse engineer, modify, or distribute the App</li>
-                        <li>Not use the App to process copyrighted material without permission</li>
-                        <li>Respect the intellectual property rights of others</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>5. Photo Library Access</h2>
-                    <ul>
-                        <li>The App requires access to your photo library to function</li>
-                        <li>We only access and process screenshot images</li>
-                        <li>We do not access, store, or transmit your personal photos</li>
-                        <li>All photo processing is done locally on your device when possible</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>6. Intellectual Property</h2>
-                    <ul>
-                        <li>SnipShot and all related content are owned by Colin Boykin</li>
-                        <li>You retain ownership of your screenshots and any content you process through the App</li>
-                        <li>The App's AI categorization and organization features are proprietary</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>7. Disclaimer of Warranties</h2>
-                    <p>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
-                </div>
-
-                <div class="section">
-                    <h2>8. Limitation of Liability</h2>
-                    <p>IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE OF THE APP.</p>
-                </div>
-
-                <div class="section">
-                    <h2>9. Termination</h2>
-                    <p>We may terminate your access to the App at any time for violation of these Terms. You may stop using the App at any time.</p>
-                </div>
-
-                <div class="section">
-                    <h2>10. Changes to Terms</h2>
-                    <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting. Your continued use of the App constitutes acceptance of modified Terms.</p>
-                </div>
-
-                <div class="section">
-                    <h2>11. Governing Law</h2>
-                    <p>These Terms are governed by the laws of the United States, without regard to conflict of law principles.</p>
-                </div>
-
-                <div class="section">
-                    <h2>12. Apple App Store Terms</h2>
-                    <p>For users who download the App from the Apple App Store, you acknowledge that:</p>
-                    <ul>
-                        <li>Apple is not responsible for the App or its content</li>
-                        <li>Apple has no obligation to provide maintenance or support for the App</li>
-                        <li>Apple is not responsible for any product warranties</li>
-                        <li>Apple is not liable for any damages related to the App</li>
-                        <li>Apple is a third-party beneficiary of these Terms</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions about these terms or our privacy practices, please contact us at:</p>
-            <p><strong>Email:</strong> boykingamedev@gmail.com</p>
-            <p><strong>Website:</strong> <a href="https://snipshot.carrd.co" target="_blank">snipshot.carrd.co</a></p>
-            <p><strong>App:</strong> SnipShot - Screenshot Manager</p>
         </div>
 
         <div class="footer">
-            <p>This legal information is designed to be transparent about our practices and your rights. SnipShot is built with privacy by design - keeping your data on your device and in your control.</p>
-            <p>Visit our main website: <a href="https://snipshot.carrd.co" target="_blank">snipshot.carrd.co</a></p>
+            <p>
+                SnipShot is built with privacy by design - keeping your data on your device and in your control. 
+                These legal documents are designed to be transparent about our minimal data collection and strong privacy protections.
+            </p>
+            <p>
+                Visit our main website: <a href="https://snipshot.carrd.co" target="_blank">snipshot.carrd.co</a> | 
+                Contact us: <a href="mailto:boykingamedev@gmail.com">boykingamedev@gmail.com</a>
+            </p>
+            <p style="margin-top: 24px; font-size: 13px; color: #666;">
+                Last Updated: July 17, 2025
+            </p>
         </div>
     </div>
-
-    <script>
-        function showTab(tabName) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => button.classList.remove('active'));
-            
-            // Show selected tab and mark button as active
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-            
-            // Scroll to top smoothly
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
