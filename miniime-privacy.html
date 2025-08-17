@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniiMe - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 16px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #764ba2;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .nav-btn.active {
+            background: #764ba2;
+            color: white;
+        }
+
+        .nav-btn.back {
+            background: #667eea;
+            color: white;
+        }
+
+        .nav-btn.back:hover {
+            background: #5a6fd8;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #764ba2;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .effective-date {
+            font-style: italic;
+            color: #666;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .nav-btn {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="index.html" class="nav-btn back">← Back to Apps</a>
+            <a href="miniime-privacy.html" class="nav-btn active">Privacy Policy</a>
+            <a href="miniime-terms.html" class="nav-btn">Terms of Service</a>
+        </div>
+
+        <div class="header">
+            <h1>MiniiMe Privacy Policy</h1>
+            <p>Personal Journaling with AI Personas</p>
+        </div>
+
+        <div class="content">
+            <div class="effective-date">Effective Date: January 1, 2025</div>
+            
+            <div class="highlight">
+                <strong>Privacy First Promise:</strong> MiniiMe is designed with privacy as the foundation. Your personal memories and journal entries remain private to you. We do not store, share, or sell your data to anyone.
+            </div>
+
+            <h3>1. Information We Collect</h3>
+            <p><strong>Local Device Storage Only:</strong></p>
+            <ul>
+                <li>Journal entries (text and video)</li>
+                <li>User profile information (name, birth year)</li>
+                <li>App preferences and settings</li>
+                <li>Achievement and streak data</li>
+                <li>Custom tags and categories</li>
+            </ul>
+            
+            <p>All of this information is stored locally on your device using iOS Core Data and UserDefaults. We do not have access to this information.</p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p><strong>AI Processing Only:</strong></p>
+            <ul>
+                <li>When you chat with your MiniiMe personas, your journal entries are temporarily sent to OpenAI's API to generate responses</li>
+                <li>This data passes through OpenAI's servers only for the duration of processing your request</li>
+                <li>We do not store copies of your data on our servers</li>
+                <li>OpenAI processes the data according to their privacy policy and data usage terms</li>
+            </ul>
+
+            <h3>3. API Key Usage</h3>
+            <div class="highlight">
+                <p><strong>Important for Users with Custom API Keys:</strong></p>
+                <ul>
+                    <li>Users who provide their own OpenAI API key are subject to our rate limiting (10 messages per minute)</li>
+                    <li>API calls are made to OpenAI's current endpoints using models we select (currently GPT-4o-mini)</li>
+                    <li>You are choosing to use whatever AI models we have configured in the app</li>
+                    <li>Your API usage will be billed directly by OpenAI to your account</li>
+                    <li>We do not monitor or log your API key usage beyond rate limiting</li>
+                </ul>
+            </div>
+
+            <h3>4. Data Sharing and Third Parties</h3>
+            <p><strong>We do not share your data with anyone except:</strong></p>
+            <ul>
+                <li><strong>OpenAI:</strong> Only for AI conversation processing. Data is not stored by OpenAI per their API terms.</li>
+                <li><strong>Apple:</strong> Subscription information is handled by Apple's App Store per their privacy policy.</li>
+            </ul>
+            <p>We do not use analytics services, advertising networks, or any other third-party services that would access your personal data.</p>
+
+            <h3>5. Data Security</h3>
+            <ul>
+                <li>All data stored locally on your device is protected by iOS security features</li>
+                <li>API communications use HTTPS encryption</li>
+                <li>We do not maintain servers that store user data</li>
+                <li>If you delete the app, all your data is permanently removed from your device</li>
+            </ul>
+
+            <h3>6. Your Rights</h3>
+            <ul>
+                <li><strong>Data Control:</strong> You have complete control over your data since it's stored on your device</li>
+                <li><strong>Deletion:</strong> Delete individual entries or all data at any time in the app</li>
+                <li><strong>Export:</strong> Data is stored in standard iOS formats accessible through device backups</li>
+                <li><strong>API Control:</strong> You can remove or change your custom API key at any time</li>
+            </ul>
+
+            <h3>7. Children's Privacy</h3>
+            <p>MiniiMe is designed for users of all ages. We do not knowingly collect any personal information from children, as all data remains on the user's device.</p>
+
+            <h3>8. Changes to Privacy Policy</h3>
+            <p>We will notify users of any material changes to this privacy policy through app updates and on this website.</p>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>If you have questions about this Privacy Policy, please contact:</p>
+                <p><strong>Colin Boykin</strong><br>
+                Email: boykingamedev@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
