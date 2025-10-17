@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Alien Space Lasers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0f 50%, #1a1a2e 100%);
+            color: #f5f5f7;
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #00ff88, #00d4ff, #ff00ff);
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+            animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(180deg); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00ff88, #00d4ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            font-size: 15px;
+            color: #86868b;
+            margin-top: 12px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 50px;
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 136, 0.2);
+            border-color: #00ff88;
+            transform: translateX(-4px);
+        }
+
+        .content {
+            background: linear-gradient(135deg, rgba(26, 26, 28, 0.8), rgba(42, 42, 46, 0.6));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 24px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #d1d1d6;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 28px;
+            color: #d1d1d6;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: rgba(0, 255, 136, 0.05);
+            border-left: 4px solid #00ff88;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #00ff88;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            font-size: 15px;
+            color: #86868b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 16px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Apps</a>
+
+        <div class="header">
+            <div class="app-icon">👾</div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Alien Space Lasers</p>
+            <p class="last-updated">Last Updated: January 2025</p>
+        </div>
+
+        <div class="content">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to Alien Space Lasers! This privacy policy explains how we handle your information when you play our arcade game. We are committed to protecting your privacy and being transparent about our data practices.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>TL;DR:</strong> Alien Space Lasers is a simple arcade game that stores your high scores and settings locally on your device. We use Google AdMob for ads, which may collect some data for ad serving. We don't collect, store, or transmit any personal information to our servers.</p>
+            </div>
+
+            <h2>Information We Collect</h2>
+            
+            <h3>Information Stored Locally</h3>
+            <p>Alien Space Lasers stores the following data locally on your device only:</p>
+            <ul>
+                <li><strong>Game Progress:</strong> Your current level, score, and lives</li>
+                <li><strong>Leaderboard Data:</strong> Your top 20 game sessions (score, level reached, planets visited, date, and time played)</li>
+                <li><strong>Settings:</strong> Sound and music preferences</li>
+                <li><strong>Tutorial Status:</strong> Whether you've completed the tutorial</li>
+                <li><strong>Statistics:</strong> Total games played</li>
+            </ul>
+            <p>
+                All of this data is stored locally using iOS UserDefaults and never leaves your device. We have no access to this information.
+            </p>
+
+            <h3>Information Collected by Third Parties</h3>
+            <p>
+                We use <strong>Google AdMob</strong> to display advertisements in the game. AdMob may collect and process certain data for ad serving purposes, including:
+            </p>
+            <ul>
+                <li>Device identifiers (Advertising ID)</li>
+                <li>Device information (model, OS version)</li>
+                <li>IP address</li>
+                <li>Ad interaction data</li>
+                <li>General location (country/region level)</li>
+            </ul>
+            <p>
+                This data is collected and managed by Google according to their privacy policy. You can learn more about Google's data practices here: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>
+            </p>
+
+            <h2>How We Use Information</h2>
+            
+            <h3>Local Data Usage</h3>
+            <ul>
+                <li><strong>Game Functionality:</strong> To save your progress, high scores, and leaderboard</li>
+                <li><strong>Personalization:</strong> To remember your sound and music preferences</li>
+                <li><strong>User Experience:</strong> To show or skip the tutorial based on whether you've seen it</li>
+            </ul>
+
+            <h3>Advertising</h3>
+            <p>
+                We display the following types of ads through Google AdMob:
+            </p>
+            <ul>
+                <li><strong>Banner Ads:</strong> Shown during gameplay (can be removed with in-app purchase)</li>
+                <li><strong>Interstitial Ads:</strong> Full-screen ads shown periodically when starting a new game</li>
+                <li><strong>Rewarded Ads:</strong> Optional ads you can watch to continue playing after game over</li>
+            </ul>
+            <p>
+                AdMob uses the data it collects to:
+            </p>
+            <ul>
+                <li>Serve personalized advertisements</li>
+                <li>Measure ad performance</li>
+                <li>Prevent fraud and abuse</li>
+            </ul>
+
+            <h2>Data Sharing and Disclosure</h2>
+            <p>
+                We do not sell, trade, or transfer your personal information to third parties. The only data sharing that occurs is:
+            </p>
+            <ul>
+                <li><strong>AdMob (Google):</strong> As described above, for ad serving purposes</li>
+                <li><strong>Apple App Store:</strong> Standard app analytics as part of App Store distribution</li>
+            </ul>
+            <p>
+                We will disclose information if required by law or to protect our rights, but since we don't collect personal data, there's nothing to disclose.
+            </p>
+
+            <h2>Children's Privacy</h2>
+            <p>
+                Alien Space Lasers is suitable for all ages. We do not knowingly collect personal information from children under 13. Our game:
+            </p>
+            <ul>
+                <li>Does not require account creation</li>
+                <li>Does not collect names, emails, or other personal information</li>
+                <li>Only displays age-appropriate advertisements</li>
+                <li>Stores game data locally on the device only</li>
+            </ul>
+            <p>
+                Google AdMob is configured to serve only child-appropriate ads when appropriate, in compliance with COPPA (Children's Online Privacy Protection Act).
+            </p>
+
+            <h2>Your Privacy Choices</h2>
+            
+            <h3>Limiting Ad Tracking</h3>
+            <p>You can limit ad tracking on your iOS device:</p>
+            <ol>
+                <li>Open <strong>Settings</strong> app</li>
+                <li>Go to <strong>Privacy & Security</strong></li>
+                <li>Tap <strong>Tracking</strong></li>
+                <li>Toggle off <strong>Allow Apps to Request to Track</strong></li>
+            </ol>
+
+            <h3>Deleting Game Data</h3>
+            <p>
+                To delete all game data (scores, settings, leaderboard):
+            </p>
+            <ol>
+                <li>Delete the Alien Space Lasers app from your device</li>
+                <li>All locally stored data will be permanently removed</li>
+            </ol>
+            <p>
+                Note: We cannot help you recover deleted data since it only exists on your device.
+            </p>
+
+            <h3>Removing Ads</h3>
+            <p>
+                You can remove banner ads by purchasing the "Remove Ads" option in the game's settings (when available).
+            </p>
+
+            <h2>Data Security</h2>
+            <p>
+                Since all game data is stored locally on your device using iOS's secure UserDefaults system, the security of your data depends on your device's security settings. We recommend:
+            </p>
+            <ul>
+                <li>Keeping your device's iOS updated</li>
+                <li>Using a passcode or biometric lock</li>
+                <li>Being cautious about device access</li>
+            </ul>
+
+            <h2>International Users</h2>
+            <p>
+                Alien Space Lasers is available worldwide. If you're outside the United States, please note that Google AdMob may process data in various countries as part of their global ad network. Refer to Google's privacy policy for more information about international data transfers.
+            </p>
+
+            <h2>Changes to This Privacy Policy</h2>
+            <p>
+                We may update this privacy policy occasionally to reflect changes in our practices or for legal reasons. We will notify you of significant changes by:
+            </p>
+            <ul>
+                <li>Updating the "Last Updated" date at the top of this policy</li>
+                <li>Displaying a notice in the app (for material changes)</li>
+            </ul>
+            <p>
+                Your continued use of Alien Space Lasers after changes constitutes acceptance of the updated policy.
+            </p>
+
+            <h2>Third-Party Links and Services</h2>
+            <p>
+                Our game may contain links to third-party services (like the App Store or social media). We are not responsible for the privacy practices of these external sites. Please review their privacy policies separately.
+            </p>
+
+            <h2>Contact Us</h2>
+            <p>
+                If you have questions or concerns about this privacy policy or our data practices, please contact us:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:boykingamedev@gmail.com">boykingamedev@gmail.com</a></li>
+                <li><strong>Developer:</strong> BoykinGameDev</li>
+            </ul>
+
+            <h2>California Privacy Rights</h2>
+            <p>
+                California residents have specific rights under the California Consumer Privacy Act (CCPA). Since we don't collect or sell personal information, most CCPA provisions don't apply. However, you still have the right to:
+            </p>
+            <ul>
+                <li>Know what information third parties (like AdMob) collect</li>
+                <li>Opt out of targeted advertising via iOS settings</li>
+                <li>Request deletion of locally stored game data by uninstalling the app</li>
+            </ul>
+
+            <h2>European Users (GDPR)</h2>
+            <p>
+                If you're in the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR), including:
+            </p>
+            <ul>
+                <li><strong>Right to Access:</strong> Your game data is stored locally and accessible to you</li>
+                <li><strong>Right to Deletion:</strong> Uninstall the app to delete all local data</li>
+                <li><strong>Right to Object:</strong> You can disable ad personalization in iOS settings</li>
+            </ul>
+            <p>
+                The legal basis for data processing by AdMob is consent (which you provide by using the app) and legitimate interest (for ad serving and fraud prevention).
+            </p>
+
+            <div class="highlight-box">
+                <h3>Summary</h3>
+                <p>
+                    Alien Space Lasers is designed with privacy in mind. We don't have servers, databases, or accounts. Your game data lives only on your device. The only third-party involvement is Google AdMob for advertisements, which you can limit through iOS settings.
+                </p>
+                <p>
+                    Play, compete for high scores, and enjoy the game knowing your privacy is protected!
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 BoykinGameDev. All rights reserved.</p>
+            <p><a href="alienspacelasers-terms.html">Terms of Service</a> | <a href="index.html">Back to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
