@@ -136,10 +136,22 @@
             --app-color: #007aff;
             --app-gradient: linear-gradient(90deg, #007aff, #5856d6);
         }
-.earstohear-card {
-    --app-color: #1a4faa;
-    --app-gradient: linear-gradient(90deg, #1a4faa, #2e7d32);
-}
+
+        .earstohear-card {
+            --app-color: #1a4faa;
+            --app-gradient: linear-gradient(90deg, #1a4faa, #2e7d32);
+        }
+
+        .alienspace-card {
+            --app-color: #00ff88;
+            --app-gradient: linear-gradient(90deg, #00ff88, #00d4ff, #ff00ff);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
 
         .app-icon {
             width: 100px;
@@ -156,11 +168,28 @@
             box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
         }
 
+        .alienspace-card .app-icon {
+            animation: rotate 20s linear infinite;
+            box-shadow: 0 16px 32px rgba(0, 255, 136, 0.4);
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         .app-title {
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 16px;
             color: #f5f5f7;
+        }
+
+        .alienspace-card .app-title {
+            background: linear-gradient(90deg, #00ff88, #00d4ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .app-tagline {
@@ -337,6 +366,14 @@
             animation-delay: 0.2s;
         }
 
+        .app-card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .app-card:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -373,6 +410,20 @@
 
         <div class="app-selection">
             <div class="apps-grid">
+                <!-- Alien Space Lasers Card -->
+                <div class="app-card alienspace-card">
+                    <div class="app-icon">👾</div>
+                    <h2 class="app-title">Alien Space Lasers</h2>
+                    <p class="app-tagline">
+                        Fast-paced arcade game with 21 levels across 7 planets. 
+                        Dodge obstacles, collect targets, and conquer boss fights in this retro-style space adventure.
+                    </p>
+                    <div class="legal-buttons">
+                        <a href="alienspacelasers-privacy.html" class="legal-btn">Privacy Policy</a>
+                        <a href="alienspacelasers-terms.html" class="legal-btn">Terms of Service</a>
+                    </div>
+                </div>
+
                 <!-- MiniiMe Card -->
                 <div class="app-card miniime-card">
                     <div class="app-icon">📔</div>
@@ -386,19 +437,21 @@
                         <a href="miniime-terms.html" class="legal-btn">Terms of Service</a>
                     </div>
                 </div>
-<!-- Ear to Hear Card -->
-<div class="app-card earstohear-card">
-    <div class="app-icon">👂</div>
-    <h2 class="app-title">Ear to Hear</h2>
-    <p class="app-tagline">
-        AI-powered scripture recognition that listens and automatically shows Bible verses in real-time. 
-        Perfect for sermons, Bible studies, and worship services.
-    </p>
-    <div class="legal-buttons">
-        <a href="earstohear-privacy.html" class="legal-btn">Privacy Policy</a>
-        <a href="earstohear-terms.html" class="legal-btn">Terms of Service</a>
-    </div>
-</div>
+
+                <!-- Ear to Hear Card -->
+                <div class="app-card earstohear-card">
+                    <div class="app-icon">👂</div>
+                    <h2 class="app-title">Ear to Hear</h2>
+                    <p class="app-tagline">
+                        AI-powered scripture recognition that listens and automatically shows Bible verses in real-time. 
+                        Perfect for sermons, Bible studies, and worship services.
+                    </p>
+                    <div class="legal-buttons">
+                        <a href="earstohear-privacy.html" class="legal-btn">Privacy Policy</a>
+                        <a href="earstohear-terms.html" class="legal-btn">Terms of Service</a>
+                    </div>
+                </div>
+
                 <!-- SnipShot Card -->
                 <div class="app-card snipshot-card">
                     <div class="app-icon">📱</div>
@@ -431,7 +484,7 @@
                 All legal documents are designed to be transparent about our data practices and user rights.
             </p>
             <p style="font-size: 13px; color: #666;">
-                Last Updated: August 2025
+                Last Updated: January 2025
             </p>
         </div>
     </div>
