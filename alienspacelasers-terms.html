@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Alien Space Lasers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0f 50%, #1a1a2e 100%);
+            color: #f5f5f7;
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #00ff88, #00d4ff, #ff00ff);
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+            animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(180deg); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00ff88, #00d4ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            font-size: 15px;
+            color: #86868b;
+            margin-top: 12px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 50px;
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 136, 0.2);
+            border-color: #00ff88;
+            transform: translateX(-4px);
+        }
+
+        .content {
+            background: linear-gradient(135deg, rgba(26, 26, 28, 0.8), rgba(42, 42, 46, 0.6));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 24px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #d1d1d6;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 28px;
+            color: #d1d1d6;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: rgba(0, 255, 136, 0.05);
+            border-left: 4px solid #00ff88;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: rgba(255, 0, 136, 0.05);
+            border-left: 4px solid #ff0088;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #00ff88;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            font-size: 15px;
+            color: #86868b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 16px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Apps</a>
+
+        <div class="header">
+            <div class="app-icon">👾</div>
+            <h1>Terms of Service</h1>
+            <p class="subtitle">Alien Space Lasers</p>
+            <p class="last-updated">Last Updated: January 2025</p>
+        </div>
+
+        <div class="content">
+            <h2>Agreement to Terms</h2>
+            <p>
+                By downloading, installing, or playing Alien Space Lasers ("the Game"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Game.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>Quick Summary:</strong> Play fair, have fun, and respect the game. We own the game, you own your device. Don't hack, cheat, or do anything harmful. We can update these terms anytime. If you break the rules, we can remove your access.</p>
+            </div>
+
+            <h2>Game Description</h2>
+            <p>
+                Alien Space Lasers is a fast-paced arcade game featuring:
+            </p>
+            <ul>
+                <li><strong>21 Levels:</strong> Progress through 7 planets with increasing difficulty</li>
+                <li><strong>Boss Fights:</strong> Face unique boss challenges every 3 levels</li>
+                <li><strong>Scoring System:</strong> Earn points by collecting targets, completing levels, and achieving time bonuses</li>
+                <li><strong>Local Leaderboard:</strong> Track your top 20 game sessions</li>
+                <li><strong>Power-Ups:</strong> Shield, Bomb, and Heart power-ups to assist gameplay</li>
+                <li><strong>Obstacles:</strong> Dodge red lasers, moving walls, and random blocks</li>
+            </ul>
+
+            <h2>License Grant</h2>
+            <p>
+                BoykinGameDev grants you a limited, non-exclusive, non-transferable, revocable license to:
+            </p>
+            <ul>
+                <li>Install and play the Game on your personal iOS device</li>
+                <li>Use the Game for personal, non-commercial entertainment purposes</li>
+            </ul>
+            <p>
+                This license does not allow you to:
+            </p>
+            <ul>
+                <li>Copy, modify, or distribute the Game</li>
+                <li>Reverse engineer, decompile, or attempt to extract source code</li>
+                <li>Use the Game for commercial purposes</li>
+                <li>Remove or alter any copyright notices or branding</li>
+            </ul>
+
+            <h2>User Conduct</h2>
+            <p>
+                You agree to use the Game in accordance with these Terms and all applicable laws. You agree NOT to:
+            </p>
+            <ul>
+                <li><strong>Cheat or Exploit:</strong> Use cheats, hacks, mods, or exploits to gain unfair advantages</li>
+                <li><strong>Manipulate Scores:</strong> Artificially inflate scores or leaderboard standings</li>
+                <li><strong>Harm the Game:</strong> Introduce viruses, malware, or harmful code</li>
+                <li><strong>Reverse Engineer:</strong> Attempt to access or modify game code</li>
+                <li><strong>Impersonate:</strong> Falsely represent yourself as BoykinGameDev or another player</li>
+                <li><strong>Harass Others:</strong> Engage in abusive or harmful behavior (though the game has no online multiplayer)</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>Violation Warning:</strong> Violating these conduct rules may result in immediate termination of your license to use the Game, with no refunds for any in-app purchases.</p>
+            </div>
+
+            <h2>Game Rules and Mechanics</h2>
+            
+            <h3>Fair Play Policy</h3>
+            <p>
+                Alien Space Lasers is designed to be challenging but fair. We implement several features to ensure fair gameplay:
+            </p>
+            <ul>
+                <li><strong>Foreshadowing:</strong> Yellow warnings appear before obstacles spawn</li>
+                <li><strong>Time Limits:</strong> 30-35 seconds per level to create urgency</li>
+                <li><strong>Score Penalties:</strong> Deaths cost 500 points, continues cost 2,000 points</li>
+                <li><strong>Skill-Based Multipliers:</strong> Perfect runs (no deaths) and fast completion earn 2-3× bonuses</li>
+            </ul>
+
+            <h3>Scoring System</h3>
+            <p>
+                Understanding the scoring system:
+            </p>
+            <ul>
+                <li>Target Collected: <strong>+100 points</strong></li>
+                <li>Level Complete: <strong>+500 points</strong> (with multipliers for perfect/fast runs)</li>
+                <li>Boss Complete: <strong>+2,000 points</strong></li>
+                <li>Time Bonus: <strong>+50 points per second remaining</strong></li>
+                <li>Death Penalty: <strong>-500 points</strong></li>
+                <li>Continue Penalty: <strong>-2,000 points</strong></li>
+            </ul>
+
+            <h3>Leaderboard Rules</h3>
+            <ul>
+                <li>Top 20 game sessions are stored locally on your device</li>
+                <li>Sorted by highest score (victories and non-victories ranked together)</li>
+                <li>Displays: Score, Level, Planets Visited, Continue Count, Victory Status</li>
+                <li>No online leaderboard or multiplayer component</li>
+            </ul>
+
+            <h2>In-App Purchases</h2>
+            <p>
+                The Game may offer in-app purchases, including:
+            </p>
+            <ul>
+                <li><strong>Remove Ads:</strong> One-time purchase to remove banner advertisements</li>
+                <li><strong>Power-Up Packs:</strong> Bundles of in-game items (when available)</li>
+                <li><strong>Cosmetic Items:</strong> Player skins and themes (when available)</li>
+            </ul>
+            <p>
+                All purchases are final and non-refundable unless required by law. Prices are subject to change. Purchases are processed through the Apple App Store and subject to Apple's terms and conditions.
+            </p>
+
+            <h2>Advertisements</h2>
+            <p>
+                The Game displays advertisements through Google AdMob:
+            </p>
+            <ul>
+                <li><strong>Banner Ads:</strong> Displayed during gameplay (removable via purchase)</li>
+                <li><strong>Interstitial Ads:</strong> Full-screen ads shown periodically</li>
+                <li><strong>Rewarded Ads:</strong> Optional ads to continue playing after game over</li>
+            </ul>
+            <p>
+                Ad frequency is randomized to maintain game balance. We do not control ad content beyond general appropriateness filters provided by AdMob.
+            </p>
+
+            <h2>Intellectual Property</h2>
+            <p>
+                All content in Alien Space Lasers, including but not limited to:
+            </p>
+            <ul>
+                <li>Game design, mechanics, and levels</li>
+                <li>Graphics, visual effects, and animations</li>
+                <li>Music and sound effects</li>
+                <li>Code, algorithms, and software</li>
+                <li>Name, logo, and branding</li>
+            </ul>
+            <p>
+                are owned by BoykinGameDev and protected by copyright, trademark, and other intellectual property laws. You may not copy, reproduce, distribute, or create derivative works without explicit written permission.
+            </p>
+
+            <h2>User-Generated Content</h2>
+            <p>
+                Currently, Alien Space Lasers does not support user-generated content (no custom levels, sharing, or online features). If such features are added in the future, additional terms will apply.
+            </p>
+
+            <h2>Game Modifications and Updates</h2>
+            <p>
+                We reserve the right to:
+            </p>
+            <ul>
+                <li>Modify, update, or discontinue the Game at any time</li>
+                <li>Change game mechanics, scoring, or difficulty</li>
+                <li>Add, remove, or modify content and features</li>
+                <li>Perform maintenance that temporarily interrupts access</li>
+            </ul>
+            <p>
+                We are not obligated to provide updates, but may do so at our discretion. Updates may require acceptance of revised Terms.
+            </p>
+
+            <h2>Termination</h2>
+            <p>
+                Your license to use the Game may be terminated if:
+            </p>
+            <ul>
+                <li>You violate these Terms</li>
+                <li>You engage in prohibited conduct</li>
+                <li>We discontinue the Game</li>
+                <li>Required by law or legal process</li>
+            </ul>
+            <p>
+                Upon termination, you must delete the Game from your device. Sections of these Terms that should survive termination (like intellectual property and liability limitations) will remain in effect.
+            </p>
+
+            <h2>Disclaimer of Warranties</h2>
+            <p>
+                THE GAME IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
+            </p>
+            <ul>
+                <li>Warranties of merchantability or fitness for a particular purpose</li>
+                <li>Warranties that the Game will be uninterrupted, error-free, or secure</li>
+                <li>Warranties regarding accuracy, reliability, or quality</li>
+            </ul>
+            <p>
+                We do not guarantee that the Game will meet your expectations or that any defects will be corrected.
+            </p>
+
+            <h2>Limitation of Liability</h2>
+            <p>
+                TO THE MAXIMUM EXTENT PERMITTED BY LAW, BOYKINGAMEDEV SHALL NOT BE LIABLE FOR:
+            </p>
+            <ul>
+                <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+                <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
+                <li>Damages arising from your use or inability to use the Game</li>
+                <li>Unauthorized access to or alteration of your device or data</li>
+                <li>Statements or conduct of any third party (including ads)</li>
+            </ul>
+            <p>
+                Our total liability shall not exceed the amount you paid for the Game (typically $0 for a free game, or the purchase price of any in-app purchases).
+            </p>
+
+            <h2>Indemnification</h2>
+            <p>
+                You agree to indemnify, defend, and hold harmless BoykinGameDev from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from:
+            </p>
+            <ul>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any laws or third-party rights</li>
+                <li>Your use or misuse of the Game</li>
+            </ul>
+
+            <h2>Dispute Resolution</h2>
+            
+            <h3>Governing Law</h3>
+            <p>
+                These Terms are governed by the laws of the United States and the state where BoykinGameDev is based, without regard to conflict of law principles.
+            </p>
+
+            <h3>Arbitration</h3>
+            <p>
+                Any disputes arising from these Terms or the Game shall be resolved through binding arbitration rather than in court, except that you may assert claims in small claims court if your claims qualify.
+            </p>
+
+            <h3>Class Action Waiver</h3>
+            <p>
+                You agree that disputes will be resolved on an individual basis only. You waive any right to participate in a class action lawsuit or class-wide arbitration.
+            </p>
+
+            <h2>Children's Use</h2>
+            <p>
+                Alien Space Lasers is suitable for players of all ages. However, if you are under 13 years old:
+            </p>
+            <ul>
+                <li>You must have parental permission to download and play</li>
+                <li>Parents should review these Terms and our Privacy Policy</li>
+                <li>In-app purchases require parental approval</li>
+            </ul>
+            <p>
+                We comply with the Children's Online Privacy Protection Act (COPPA) and do not knowingly collect personal information from children under 13.
+            </p>
+
+            <h2>Privacy</h2>
+            <p>
+                Your use of the Game is also governed by our <a href="alienspacelasers-privacy.html">Privacy Policy</a>, which explains how we handle data. By using the Game, you consent to the practices described in the Privacy Policy.
+            </p>
+
+            <h2>Third-Party Services</h2>
+            <p>
+                The Game integrates with third-party services:
+            </p>
+            <ul>
+                <li><strong>Google AdMob:</strong> For advertisements (subject to Google's terms)</li>
+                <li><strong>Apple App Store:</strong> For distribution and in-app purchases (subject to Apple's terms)</li>
+            </ul>
+            <p>
+                We are not responsible for the practices or policies of these third parties. Your use of third-party services is at your own risk.
+            </p>
+
+            <h2>Contact and Support</h2>
+            <p>
+                For questions, support, or to report violations of these Terms:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:boykingamedev@gmail.com">boykingamedev@gmail.com</a></li>
+                <li><strong>Response Time:</strong> We aim to respond within 48-72 hours</li>
+            </ul>
+
+            <h2>Changes to Terms</h2>
+            <p>
+                We may update these Terms at any time. Changes will be effective immediately upon posting the updated Terms in the Game or on our website. We will notify you of material changes via:
+            </p>
+            <ul>
+                <li>An in-game notification</li>
+                <li>Email (if you've provided one)</li>
+                <li>Updating the "Last Updated" date</li>
+            </ul>
+            <p>
+                Your continued use of the Game after changes constitutes acceptance of the updated Terms. If you disagree with changes, you must stop using the Game.
+            </p>
+
+            <h2>Severability</h2>
+            <p>
+                If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.
+            </p>
+
+            <h2>Entire Agreement</h2>
+            <p>
+                These Terms, along with our Privacy Policy, constitute the entire agreement between you and BoykinGameDev regarding the Game, superseding any prior agreements or understandings.
+            </p>
+
+            <h2>No Waiver</h2>
+            <p>
+                Our failure to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision.
+            </p>
+
+            <div class="highlight-box">
+                <h3>Thank You for Playing!</h3>
+                <p>
+                    We created Alien Space Lasers to provide a fun, challenging arcade experience. These Terms exist to ensure a fair and enjoyable environment for all players. By following these rules, you help maintain the integrity of the game.
+                </p>
+                <p>
+                    Now go conquer those 21 levels and achieve the highest score in the galaxy! 🚀
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 BoykinGameDev. All rights reserved.</p>
+            <p><a href="alienspacelasers-privacy.html">Privacy Policy</a> | <a href="index.html">Back to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
