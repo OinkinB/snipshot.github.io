@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Alien Space Lasers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0f 50%, #1a1a2e 100%);
+            color: #f5f5f7;
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #00ff88, #00d4ff, #ff00ff);
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            margin-bottom: 24px;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00ff88, #00d4ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #a1a1aa;
+            margin-bottom: 8px;
+        }
+
+        .developer-name {
+            font-size: 18px;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 50px;
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 255, 136, 0.2);
+            border-color: #00ff88;
+            transform: translateX(-4px);
+        }
+
+        .content-card {
+            background: linear-gradient(135deg, rgba(26, 26, 28, 0.8), rgba(42, 42, 46, 0.6));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 24px;
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #d1d1d6;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .contact-box {
+            background: rgba(0, 255, 136, 0.05);
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .contact-email {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00ff88;
+            text-decoration: none;
+            display: inline-block;
+            margin: 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            color: #00d4ff;
+            transform: scale(1.05);
+        }
+
+        .icon {
+            font-size: 32px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            min-width: 32px;
+        }
+
+        .faq-item {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid #00d4ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 12px;
+        }
+
+        .faq-answer {
+            color: #d1d1d6;
+            margin-bottom: 0;
+        }
+
+        .privacy-highlight {
+            background: rgba(255, 0, 136, 0.05);
+            border: 2px solid #ff0088;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .privacy-highlight p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff0088;
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00ff88;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            .content-card {
+                padding: 32px 24px;
+            }
+
+            .contact-box {
+                padding: 24px 16px;
+            }
+
+            .contact-email {
+                font-size: 18px;
+                word-break: break-all;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Apps</a>
+
+        <div class="header">
+            <div class="app-icon">👾</div>
+            <h1>Support</h1>
+            <p class="subtitle">Alien Space Lasers</p>
+            <p class="developer-name">by Colin Boykin</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="content-card">
+            <h2>📧 Get in Touch</h2>
+            <p>Found a bug? Have suggestions? Want to share your high score? I'd love to hear from you!</p>
+            
+            <div class="contact-box">
+                <div class="icon">✉️</div>
+                <p style="color: #a1a1aa; margin-bottom: 8px;">Email me at:</p>
+                <a href="mailto:boykingamedev@gmail.com" class="contact-email">
+                    boykingamedev@gmail.com
+                </a>
+                <p style="color: #86868b; font-size: 14px; margin-top: 12px; margin-bottom: 0;">
+                    I typically respond within 24-48 hours!
+                </p>
+            </div>
+        </div>
+
+        <!-- Privacy Guarantee -->
+        <div class="content-card">
+            <h2>🔒 Your Privacy Matters</h2>
+            
+            <div class="privacy-highlight">
+                <p>⭐ Alien Space Lasers does NOT and will NEVER save your personal data ⭐</p>
+            </div>
+
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-icon">✅</span>
+                    <div>
+                        <strong>No Account Required</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">Play instantly - no sign-up, no registration, no hassle.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">✅</span>
+                    <div>
+                        <strong>No Personal Data Collection</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">Your scores stay on YOUR device. We can't see them.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">✅</span>
+                    <div>
+                        <strong>No Tracking</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">We don't know who you are, and we like it that way.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">✅</span>
+                    <div>
+                        <strong>Local Storage Only</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">Everything saves to your iPhone - never to our servers.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <p style="margin-top: 24px; font-size: 15px; color: #86868b;">
+                Read our full <a href="alienspacelasers-privacy.html" style="color: #00d4ff; text-decoration: none; font-weight: 600;">Privacy Policy</a>
+            </p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="content-card">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I get better at the game?</div>
+                <div class="faq-answer">
+                    Watch for yellow warnings before obstacles appear! Perfect runs (no deaths) earn 2× score multiplier. Speed matters too - finish levels under 15 seconds for 1.5× bonus. Stack both for 3× multiplier!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What's the highest score possible?</div>
+                <div class="faq-answer">
+                    A perfect game (all levels completed without deaths or continues, with perfect timing) can score approximately 100,000-110,000 points. Can you beat it?
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I remove ads?</div>
+                <div class="faq-answer">
+                    Yes! The "Remove Ads" option will be available in future updates. For now, you can limit ad tracking in iOS Settings → Privacy & Security → Tracking.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">I lost my progress! Can you restore it?</div>
+                <div class="faq-answer">
+                    Unfortunately, no. Since all data is stored locally on your device (for privacy), if you delete the app or reset your phone, your scores are gone forever. This is the tradeoff for not requiring accounts or cloud storage.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why are continues so expensive (2,000 points)?</div>
+                <div class="faq-answer">
+                    Alien Space Lasers is designed to reward skillful play! The hefty continue penalty encourages players to improve and attempt perfect runs. It keeps the leaderboard meaningful.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Will you add more levels?</div>
+                <div class="faq-answer">
+                    Maybe! The game is designed as a complete 21-level experience you can WIN. Future updates may add new game modes, challenges, or bonus planets based on player feedback. Send me your ideas!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I play offline?</div>
+                <div class="faq-answer">
+                    Yes! The core game works completely offline. You only need internet for ads. No ads = no internet required.
+                </div>
+            </div>
+        </div>
+
+        <!-- Bug Reporting -->
+        <div class="content-card">
+            <h2>🐛 Report a Bug</h2>
+            <p>Found something broken? Help me fix it! When reporting bugs, please include:</p>
+            
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-icon">📱</span>
+                    <div>
+                        <strong>Device Info</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">iPhone model and iOS version (e.g., "iPhone 14, iOS 17.2")</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">🎮</span>
+                    <div>
+                        <strong>What Happened</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">Describe the issue - did the game crash? Is something not working?</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">📍</span>
+                    <div>
+                        <strong>Where It Happened</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">Which level? Menu? Boss fight? The more detail, the better!</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="feature-icon">🔄</span>
+                    <div>
+                        <strong>Can You Reproduce It?</strong>
+                        <p style="margin: 4px 0 0 0; color: #a1a1aa;">Does it happen every time? Only sometimes?</p>
+                    </div>
+                </li>
+            </ul>
+
+            <p style="margin-top: 24px;">
+                Send bug reports to: <a href="mailto:boykingamedev@gmail.com?subject=Bug Report - Alien Space Lasers" style="color: #00ff88; text-decoration: none; font-weight: 600;">boykingamedev@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="content-card">
+            <h2>💡 Share Your Ideas</h2>
+            <p>Got suggestions for making Alien Space Lasers even better? I'm all ears! Whether it's:</p>
+            
+            <ul style="padding-left: 24px; color: #d1d1d6;">
+                <li style="margin-bottom: 12px;">New power-ups or obstacles</li>
+                <li style="margin-bottom: 12px;">Boss fight mechanics</li>
+                <li style="margin-bottom: 12px;">UI improvements</li>
+                <li style="margin-bottom: 12px;">Difficulty tweaks</li>
+                <li style="margin-bottom: 12px;">Feature requests</li>
+                <li style="margin-bottom: 12px;">Anything else on your mind!</li>
+            </ul>
+
+            <p style="margin-top: 24px;">
+                Send your ideas to: <a href="mailto:boykingamedev@gmail.com?subject=Suggestion - Alien Space Lasers" style="color: #00ff88; text-decoration: none; font-weight: 600;">boykingamedev@gmail.com</a>
+            </p>
+
+            <p style="font-size: 15px; color: #86868b; margin-top: 20px; margin-bottom: 0;">
+                💬 Every message helps shape future updates. Your feedback matters!
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="index.html">← All Apps</a>
+                <a href="alienspacelasers-privacy.html">Privacy Policy</a>
+                <a href="alienspacelasers-terms.html">Terms of Service</a>
+            </div>
+            <p style="color: #86868b; font-size: 15px; margin-bottom: 12px;">
+                © 2025 BoykinGameDev - Colin Boykin
+            </p>
+            <p style="color: #666; font-size: 13px;">
+                Made with ❤️ for arcade game fans
+            </p>
+        </div>
+    </div>
+</body>
+</html>
