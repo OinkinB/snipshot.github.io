@@ -127,6 +127,11 @@
             transform: scaleX(1);
         }
 
+        .mimixme-card {
+            --app-color: #87CEEB;
+            --app-gradient: linear-gradient(90deg, #5AB9EA, #87CEEB, #4A90E2);
+        }
+
         .miniime-card {
             --app-color: #764ba2;
             --app-gradient: linear-gradient(90deg, #667eea, #764ba2);
@@ -362,17 +367,11 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        .app-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .app-card:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        .app-card:nth-child(4) {
-            animation-delay: 0.6s;
-        }
+        .app-card:nth-child(1) { animation-delay: 0s; }
+        .app-card:nth-child(2) { animation-delay: 0.15s; }
+        .app-card:nth-child(3) { animation-delay: 0.3s; }
+        .app-card:nth-child(4) { animation-delay: 0.45s; }
+        .app-card:nth-child(5) { animation-delay: 0.6s; }
 
         @keyframes fadeInUp {
             from {
@@ -410,6 +409,20 @@
 
         <div class="app-selection">
             <div class="apps-grid">
+                <!-- MimixMe Card - NEW -->
+                <div class="app-card mimixme-card">
+                    <div class="app-icon">🎭</div>
+                    <h2 class="app-title">MimixMe</h2>
+                    <p class="app-tagline">
+                        AI-powered voice cloning for entertainment. Create hilarious voice clips that mimic anyone's voice. 
+                        Perfect for pranks, social media content, and comedy gold.
+                    </p>
+                    <div class="legal-buttons">
+                        <a href="mimixme-privacy.html" class="legal-btn">Privacy Policy</a>
+                        <a href="mimixme-terms.html" class="legal-btn">Terms of Service</a>
+                    </div>
+                </div>
+
                 <!-- Alien Space Lasers Card -->
                 <div class="app-card alienspace-card">
                     <div class="app-icon">👾</div>
@@ -418,11 +431,11 @@
                         Fast-paced arcade game with 21 levels across 7 planets. 
                         Dodge obstacles, collect targets, and conquer boss fights in this retro-style space adventure.
                     </p>
-<div class="legal-buttons">
-    <a href="alienspacelasers-privacy.html" class="legal-btn">Privacy Policy</a>
-    <a href="alienspacelasers-terms.html" class="legal-btn">Terms of Service</a>
-    <a href="alienspacelasers-support.html" class="legal-btn">Support</a> <!-- ADD THIS -->
-</div>
+                    <div class="legal-buttons">
+                        <a href="alienspacelasers-privacy.html" class="legal-btn">Privacy Policy</a>
+                        <a href="alienspacelasers-terms.html" class="legal-btn">Terms of Service</a>
+                        <a href="alienspacelasers-support.html" class="legal-btn">Support</a>
+                    </div>
                 </div>
 
                 <!-- MiniiMe Card -->
@@ -485,70 +498,9 @@
                 All legal documents are designed to be transparent about our data practices and user rights.
             </p>
             <p style="font-size: 13px; color: #666;">
-                Last Updated: January 2025
+                Last Updated: February 2025
             </p>
         </div>
     </div>
-
-    <script>
-        // Add smooth hover effects and interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            const appCards = document.querySelectorAll('.app-card');
-            
-            appCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-12px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // Add click animation to buttons
-            const buttons = document.querySelectorAll('.legal-btn, .quick-link');
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    // Create ripple effect
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.cssText = `
-                        position: absolute;
-                        width: ${size}px;
-                        height: ${size}px;
-                        left: ${x}px;
-                        top: ${y}px;
-                        background: rgba(255, 255, 255, 0.3);
-                        border-radius: 50%;
-                        transform: scale(0);
-                        animation: ripple 0.6s linear;
-                        pointer-events: none;
-                    `;
-                    
-                    this.style.position = 'relative';
-                    this.style.overflow = 'hidden';
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => ripple.remove(), 600);
-                });
-            });
-        });
-
-        // Add CSS for ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
 </body>
 </html>
