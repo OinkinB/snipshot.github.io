@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MimixMe Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #000000;
+            color: #f5f5f7;
+            line-height: 1.6;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 12px;
+            padding: 8px;
+            margin: 40px 0;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .nav-button {
+            flex: 1;
+            padding: 12px 20px;
+            background: transparent;
+            border: none;
+            color: #a1a1aa;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button.active {
+            background: linear-gradient(135deg, #5AB9EA, #87CEEB);
+            color: white;
+            box-shadow: 0 2px 8px rgba(90, 185, 234, 0.3);
+        }
+
+        .nav-button:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.05);
+            color: #f5f5f7;
+        }
+
+        .nav-button.back {
+            background: linear-gradient(135deg, #5AB9EA, #87CEEB);
+            color: white;
+        }
+
+        .nav-button.back:hover {
+            background: linear-gradient(135deg, #4A90E2, #5AB9EA);
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 80px 0 40px;
+            border-bottom: 1px solid #1d1d1f;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #5AB9EA, #87CEEB, #4A90E2);
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 32px;
+            color: white;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #f5f5f7, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #a1a1aa;
+            margin-bottom: 16px;
+        }
+
+        .last-updated {
+            font-size: 17px;
+            color: #86868b;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 60px 0;
+        }
+
+        .overview {
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 18px;
+            padding: 48px;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #87CEEB, transparent);
+        }
+
+        .overview h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #f5f5f7;
+        }
+
+        .overview p {
+            font-size: 19px;
+            line-height: 1.5;
+            color: #a1a1aa;
+            margin-bottom: 16px;
+        }
+
+        .overview .highlight {
+            background: rgba(90, 185, 234, 0.1);
+            border: 1px solid rgba(90, 185, 234, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .overview .highlight p {
+            color: #87CEEB;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #424245;
+            color: #f5f5f7;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 40px 0 20px;
+            color: #f5f5f7;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #a1a1aa;
+            margin-bottom: 20px;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        li {
+            position: relative;
+            padding: 12px 0 12px 32px;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #a1a1aa;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 6px;
+            height: 6px;
+            background: #87CEEB;
+            border-radius: 50%;
+        }
+
+        li strong {
+            color: #f5f5f7;
+            font-weight: 600;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 59, 48, 0.1), rgba(255, 69, 58, 0.1));
+            border: 1px solid rgba(255, 59, 48, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .warning-box p,
+        .warning-box li {
+            color: #ff6961;
+        }
+
+        .warning-box strong {
+            color: #ff453a;
+        }
+
+        .warning-box h3 {
+            color: #ff453a;
+            margin-top: 0;
+        }
+
+        /* Important Box */
+        .important-box {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.1), rgba(255, 214, 10, 0.1));
+            border: 1px solid rgba(255, 149, 0, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .important-box p,
+        .important-box li {
+            color: #ffb340;
+        }
+
+        .important-box strong {
+            color: #ffd60a;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 18px;
+            padding: 48px;
+            text-align: center;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #34c759, transparent);
+        }
+
+        .contact h2 {
+            border: none;
+            margin-bottom: 24px;
+            padding: 0;
+        }
+
+        .contact p {
+            margin-bottom: 16px;
+        }
+
+        .contact strong {
+            color: #34c759;
+        }
+
+        /* Links */
+        a {
+            color: #87CEEB;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #5AB9EA;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 60px 0 80px;
+            border-top: 1px solid #1d1d1f;
+            margin-top: 80px;
+        }
+
+        .footer p {
+            font-size: 15px;
+            color: #86868b;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+
+        .footer a {
+            color: #87CEEB;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .overview,
+            .contact {
+                padding: 32px 24px;
+            }
+
+            .warning-box,
+            .important-box {
+                padding: 24px;
+            }
+
+            .header {
+                padding: 60px 0 40px;
+            }
+
+            .content {
+                padding: 40px 0;
+            }
+
+            .section {
+                margin-bottom: 60px;
+            }
+
+            .nav {
+                margin: 20px 0;
+            }
+
+            .nav-button {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection styling */
+        ::selection {
+            background: rgba(90, 185, 234, 0.3);
+            color: #f5f5f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🎭</div>
+            <h1>Terms of Service</h1>
+            <p class="subtitle">MimixMe - AI Voice Cloning</p>
+            <p class="last-updated">Last Updated: February 4, 2026</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="index.html" class="nav-button back">← Back to Apps</a>
+            <a href="mimixme-privacy.html" class="nav-button">Privacy Policy</a>
+            <a href="mimixme-terms.html" class="nav-button active">Terms of Service</a>
+        </div>
+
+        <div class="content">
+            <div class="overview">
+                <h2>Agreement to Terms</h2>
+                <p>By downloading, installing, or using MimixMe ("the App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the App.</p>
+                
+                <div class="highlight">
+                    <p><strong>Important:</strong> MimixMe is an AI voice cloning application intended for entertainment purposes only. Misuse of this technology can violate laws and harm others. You are responsible for how you use the App.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>These Terms of Service ("Terms") govern your access to and use of MimixMe, developed by BoykinGameDev ("we," "us," or "our"). By using the App, you represent that you are at least 17 years old and have the legal capacity to enter into this agreement.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Description of Service</h2>
+                <p>MimixMe is an AI-powered voice cloning application that allows users to:</p>
+                <ul>
+                    <li>Record or upload short voice samples (reference audio)</li>
+                    <li>Create voice profiles for entertainment purposes</li>
+                    <li>Generate AI-synthesized voice clips using text input</li>
+                    <li>Store and share generated audio clips</li>
+                </ul>
+                
+                <div class="important-box">
+                    <h3>AI-Generated Content Disclaimer</h3>
+                    <p><strong>All voice clips created by MimixMe are AI-generated and synthesized.</strong> They are not actual recordings of real people. The quality and accuracy of voice cloning varies and is provided "as-is" for entertainment purposes.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>3. Acceptable Use Policy</h2>
+
+                <h3>Permitted Uses</h3>
+                <p>You may use MimixMe for:</p>
+                <ul>
+                    <li>Personal entertainment and comedy content</li>
+                    <li>Creating funny voice clips for friends and family</li>
+                    <li>Social media content creation (with proper disclosure)</li>
+                    <li>Parody and satire (within legal bounds)</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h3>Prohibited Uses</h3>
+                    <p><strong>You MAY NOT use MimixMe for:</strong></p>
+                    <ul>
+                        <li><strong>Fraud or Deception:</strong> Impersonating others to deceive, defraud, or cause harm</li>
+                        <li><strong>Non-Consensual Impersonation:</strong> Creating voice clips of people without permission for harmful purposes</li>
+                        <li><strong>Harassment or Bullying:</strong> Creating content to harass, threaten, or intimidate individuals</li>
+                        <li><strong>Illegal Activities:</strong> Any use that violates local, state, federal, or international law</li>
+                        <li><strong>Political Manipulation:</strong> Creating misleading political content or deepfakes</li>
+                        <li><strong>Commercial Impersonation:</strong> Impersonating celebrities, public figures, or brands for profit</li>
+                        <li><strong>Defamation:</strong> Creating content that damages someone's reputation</li>
+                        <li><strong>Identity Theft:</strong> Using someone's voice to access accounts or services</li>
+                        <li><strong>Scams:</strong> Phone scams, voice phishing, or financial fraud</li>
+                        <li><strong>Non-Consensual Intimate Content:</strong> Creating adult or intimate content without consent</li>
+                        <li><strong>Hate Speech:</strong> Content promoting violence, discrimination, or hatred</li>
+                    </ul>
+                </div>
+
+                <h3>Consent Requirements</h3>
+                <p>You must:</p>
+                <ul>
+                    <li>Obtain consent before creating a voice profile of another person</li>
+                    <li>Clearly disclose that content is AI-generated when sharing publicly</li>
+                    <li>Respect intellectual property rights and publicity rights</li>
+                    <li>Comply with all applicable laws in your jurisdiction</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. User Responsibilities</h2>
+
+                <h3>You Are Responsible For:</h3>
+                <ul>
+                    <li><strong>Content You Create:</strong> All generated voice clips and how they are used</li>
+                    <li><strong>Legal Compliance:</strong> Ensuring your use complies with all applicable laws</li>
+                    <li><strong>Obtaining Consent:</strong> Getting permission before cloning voices</li>
+                    <li><strong>Disclosure:</strong> Informing others that content is AI-generated</li>
+                    <li><strong>Your Device:</strong> Maintaining security of your device and data</li>
+                </ul>
+
+                <div class="important-box">
+                    <h3>Zero Tolerance for Misuse</h3>
+                    <p>We have <strong>zero tolerance</strong> for misuse of this technology. Violation of these terms may result in immediate termination of your access to the App and potential reporting to law enforcement.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>5. Intellectual Property Rights</h2>
+
+                <h3>Our Rights</h3>
+                <ul>
+                    <li>MimixMe and all related technology are owned by BoykinGameDev</li>
+                    <li>The App interface, design, and code are protected by copyright</li>
+                    <li>Our trademarks and logos may not be used without permission</li>
+                    <li>You may not reverse engineer, decompile, or modify the App</li>
+                </ul>
+
+                <h3>Your Content</h3>
+                <ul>
+                    <li>You retain ownership of voice recordings you provide</li>
+                    <li>You retain rights to generated voice clips created using the App</li>
+                    <li>By using the App, you grant us a limited license to process your audio for AI generation only</li>
+                    <li>We do not claim ownership of your voice data or generated content</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>6. Subscription and Payment Terms</h2>
+
+                <h3>Free Trial</h3>
+                <ul>
+                    <li>New users receive 3 free voice generations</li>
+                    <li>Free clips limited to 12 seconds duration</li>
+                    <li>Free trial cannot be reset or restarted</li>
+                </ul>
+
+                <h3>Premium Subscription</h3>
+                <p>Premium subscription options:</p>
+                <ul>
+                    <li><strong>Monthly:</strong> $6.99 per month (auto-renewing)</li>
+                    <li><strong>Annual:</strong> $45.00 per year (auto-renewing, save 46%)</li>
+                </ul>
+
+                <h3>Premium Benefits</h3>
+                <ul>
+                    <li>Unlimited voice generations</li>
+                    <li>30-second clip duration (vs 12 seconds)</li>
+                    <li>Priority processing</li>
+                    <li>Premium support</li>
+                </ul>
+
+                <h3>Billing</h3>
+                <ul>
+                    <li>All subscriptions managed through Apple App Store</li>
+                    <li>Payment processed via your Apple ID</li>
+                    <li>Auto-renewal unless cancelled 24 hours before period ends</li>
+                    <li>No refunds for partial periods</li>
+                </ul>
+
+                <h3>Cancellation</h3>
+                <ul>
+                    <li>Cancel anytime through iOS Settings → Apple ID → Subscriptions</li>
+                    <li>Access continues until end of billing period</li>
+                    <li>No pro-rated refunds</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>7. Disclaimers and Limitations of Liability</h2>
+
+                <h3>Service "As-Is"</h3>
+                <p>MimixMe is provided "AS-IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including but not limited to:</p>
+                <ul>
+                    <li>Accuracy or quality of voice cloning</li>
+                    <li>Uninterrupted or error-free operation</li>
+                    <li>Security of data transmission</li>
+                    <li>Availability of the service</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h3>Limitation of Liability</h3>
+                    <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+                    <ul>
+                        <li>We are not liable for any damages arising from your use of the App</li>
+                        <li>We are not responsible for how you use generated content</li>
+                        <li>We are not liable for third-party actions based on content you create</li>
+                        <li>Total liability limited to amount paid for the service (if any)</li>
+                    </ul>
+                </div>
+
+                <h3>No Liability for Misuse</h3>
+                <p>We are not responsible for:</p>
+                <ul>
+                    <li>Illegal or prohibited uses of the App</li>
+                    <li>Content created by users in violation of these Terms</li>
+                    <li>Harm caused by misuse of voice cloning technology</li>
+                    <li>Legal consequences from your use of the App</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>8. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless BoykinGameDev, its affiliates, and their respective officers, directors, employees, and agents from any claims, losses, damages, liabilities, costs, and expenses (including legal fees) arising from:</p>
+                <ul>
+                    <li>Your use or misuse of the App</li>
+                    <li>Violation of these Terms</li>
+                    <li>Violation of any law or rights of third parties</li>
+                    <li>Content you create using the App</li>
+                    <li>Your violation of consent or privacy rights</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. Termination</h2>
+
+                <h3>We May Terminate</h3>
+                <p>We reserve the right to suspend or terminate your access to MimixMe at any time, without notice, for:</p>
+                <ul>
+                    <li>Violation of these Terms</li>
+                    <li>Suspected fraudulent or illegal activity</li>
+                    <li>Abusive or harmful behavior</li>
+                    <li>Any reason at our sole discretion</li>
+                </ul>
+
+                <h3>You May Terminate</h3>
+                <ul>
+                    <li>Uninstall the App at any time</li>
+                    <li>Cancel subscription through iOS Settings</li>
+                    <li>Contact us to delete your account data</li>
+                </ul>
+
+                <h3>Effect of Termination</h3>
+                <ul>
+                    <li>All licenses granted to you terminate immediately</li>
+                    <li>You must cease all use of the App</li>
+                    <li>Local data remains on your device until deleted</li>
+                    <li>No refunds for terminated accounts</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>10. AI Technology Limitations</h2>
+
+                <h3>Technology Disclaimer</h3>
+                <p>Voice cloning AI is an evolving technology with limitations:</p>
+                <ul>
+                    <li>Results vary based on audio quality and voice characteristics</li>
+                    <li>Not all voices clone equally well</li>
+                    <li>Generated audio may contain artifacts or imperfections</li>
+                    <li>Long-form content may have inconsistencies</li>
+                    <li>Certain languages and accents may perform differently</li>
+                </ul>
+
+                <h3>No Guarantees</h3>
+                <p>We do not guarantee:</p>
+                <ul>
+                    <li>Perfect voice replication</li>
+                    <li>Specific quality levels</li>
+                    <li>Compatibility with all voices or languages</li>
+                    <li>Consistent results across generations</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>11. Privacy and Data Processing</h2>
+                <p>Your use of MimixMe is also governed by our <a href="mimixme-privacy.html">Privacy Policy</a>, which explains:</p>
+                <ul>
+                    <li>What data we collect and process</li>
+                    <li>How voice data is handled and protected</li>
+                    <li>Your privacy rights and choices</li>
+                    <li>Data retention and deletion</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>12. Third-Party Services</h2>
+                <p>MimixMe integrates with third-party services:</p>
+                <ul>
+                    <li><strong>Apple App Store:</strong> For subscriptions and payments</li>
+                    <li><strong>Google Cloud:</strong> For AI processing infrastructure</li>
+                </ul>
+                <p>Your use of these services is subject to their respective terms and privacy policies.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Geographic Restrictions</h2>
+                <p>MimixMe may not be available in all countries or regions. Some jurisdictions have specific laws regarding AI voice cloning. You are responsible for ensuring your use complies with local laws.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Changes to Terms</h2>
+                <p>We may update these Terms from time to time. We will notify you of material changes by:</p>
+                <ul>
+                    <li>Updating the "Last Updated" date</li>
+                    <li>Displaying an in-app notification</li>
+                    <li>Requiring acceptance for continued use</li>
+                </ul>
+                <p>Continued use after changes constitutes acceptance of the updated Terms.</p>
+            </div>
+
+            <div class="section">
+                <h2>15. Dispute Resolution</h2>
+
+                <h3>Governing Law</h3>
+                <p>These Terms are governed by the laws of the State of [Your State], United States, without regard to conflict of law principles.</p>
+
+                <h3>Arbitration</h3>
+                <p>Any disputes arising from these Terms or use of the App shall be resolved through binding arbitration, except for:</p>
+                <ul>
+                    <li>Claims in small claims court</li>
+                    <li>Intellectual property disputes</li>
+                    <li>Injunctive relief matters</li>
+                </ul>
+
+                <h3>Class Action Waiver</h3>
+                <p>You agree that disputes must be brought individually and not as part of any class or representative action.</p>
+            </div>
+
+            <div class="section">
+                <h2>16. Severability</h2>
+                <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect.</p>
+            </div>
+
+            <div class="section">
+                <h2>17. Entire Agreement</h2>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and BoykinGameDev regarding use of MimixMe and supersede all prior agreements.</p>
+            </div>
+
+            <div class="section">
+                <h2>18. Contact and Support</h2>
+                <p>For questions, support, or to report violations of these Terms:</p>
+                <ul>
+                    <li><strong>Email:</strong> boykingamedev@gmail.com</li>
+                    <li><strong>App:</strong> MimixMe - AI Voice Cloning</li>
+                    <li><strong>Developer:</strong> BoykinGameDev</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>19. Age Requirement</h2>
+                <p>You must be at least 17 years old to use MimixMe. By using the App, you represent that you meet this age requirement.</p>
+            </div>
+
+            <div class="section">
+                <h2>20. Export Control</h2>
+                <p>You agree to comply with all applicable export and import laws and regulations. You may not use or export MimixMe in violation of U.S. export laws and regulations.</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact">
+            <h2>Questions About These Terms?</h2>
+            <p>If you have any questions about these Terms of Service, please contact us:</p>
+            <p><strong>Email:</strong> boykingamedev@gmail.com</p>
+            <p><strong>App:</strong> MimixMe - AI Voice Cloning</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>By using MimixMe, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy.</strong></p>
+            <p style="margin-top: 24px;">Use this technology responsibly. Respect others' voices, privacy, and rights.</p>
+            <p style="margin-top: 16px;">Last Updated: February 4, 2026</p>
+        </div>
+    </div>
+</body>
+</html>
