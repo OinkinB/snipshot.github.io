@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MimixMe Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #000000;
+            color: #f5f5f7;
+            line-height: 1.6;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 12px;
+            padding: 8px;
+            margin: 40px 0;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .nav-button {
+            flex: 1;
+            padding: 12px 20px;
+            background: transparent;
+            border: none;
+            color: #a1a1aa;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button.active {
+            background: linear-gradient(135deg, #5AB9EA, #87CEEB);
+            color: white;
+            box-shadow: 0 2px 8px rgba(90, 185, 234, 0.3);
+        }
+
+        .nav-button:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.05);
+            color: #f5f5f7;
+        }
+
+        .nav-button.back {
+            background: linear-gradient(135deg, #5AB9EA, #87CEEB);
+            color: white;
+        }
+
+        .nav-button.back:hover {
+            background: linear-gradient(135deg, #4A90E2, #5AB9EA);
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 80px 0 40px;
+            border-bottom: 1px solid #1d1d1f;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #5AB9EA, #87CEEB, #4A90E2);
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 32px;
+            color: white;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #f5f5f7, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #a1a1aa;
+            margin-bottom: 16px;
+        }
+
+        .last-updated {
+            font-size: 17px;
+            color: #86868b;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 60px 0;
+        }
+
+        .overview {
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 18px;
+            padding: 48px;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #87CEEB, transparent);
+        }
+
+        .overview h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #f5f5f7;
+        }
+
+        .overview p {
+            font-size: 19px;
+            line-height: 1.5;
+            color: #a1a1aa;
+            margin-bottom: 16px;
+        }
+
+        .overview .highlight {
+            background: rgba(90, 185, 234, 0.1);
+            border: 1px solid rgba(90, 185, 234, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .overview .highlight p {
+            color: #87CEEB;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #424245;
+            color: #f5f5f7;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 40px 0 20px;
+            color: #f5f5f7;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #a1a1aa;
+            margin-bottom: 20px;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        li {
+            position: relative;
+            padding: 12px 0 12px 32px;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #a1a1aa;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 6px;
+            height: 6px;
+            background: #87CEEB;
+            border-radius: 50%;
+        }
+
+        li strong {
+            color: #f5f5f7;
+            font-weight: 600;
+        }
+
+        /* Highlight Boxes */
+        .ai-box {
+            background: linear-gradient(135deg, rgba(255, 149, 0, 0.1), rgba(255, 214, 10, 0.1));
+            border: 1px solid rgba(255, 149, 0, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .ai-box p,
+        .ai-box li {
+            color: #ffb340;
+        }
+
+        .ai-box strong {
+            color: #ffd60a;
+        }
+
+        .no-share-box {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(48, 209, 88, 0.1));
+            border: 1px solid rgba(52, 199, 89, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .no-share-box p,
+        .no-share-box li {
+            color: #32d74b;
+        }
+
+        .no-share-box strong {
+            color: #30d158;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 59, 48, 0.1), rgba(255, 69, 58, 0.1));
+            border: 1px solid rgba(255, 59, 48, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .warning-box p,
+        .warning-box li {
+            color: #ff6961;
+        }
+
+        .warning-box strong {
+            color: #ff453a;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1a1a1c, #2a2a2e);
+            border: 1px solid #424245;
+            border-radius: 18px;
+            padding: 48px;
+            text-align: center;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #34c759, transparent);
+        }
+
+        .contact h2 {
+            border: none;
+            margin-bottom: 24px;
+            padding: 0;
+        }
+
+        .contact p {
+            margin-bottom: 16px;
+        }
+
+        .contact strong {
+            color: #34c759;
+        }
+
+        /* Links */
+        a {
+            color: #87CEEB;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #5AB9EA;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 60px 0 80px;
+            border-top: 1px solid #1d1d1f;
+            margin-top: 80px;
+        }
+
+        .footer p {
+            font-size: 15px;
+            color: #86868b;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto 16px;
+        }
+
+        .footer a {
+            color: #87CEEB;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .overview,
+            .contact {
+                padding: 32px 24px;
+            }
+
+            .ai-box,
+            .no-share-box,
+            .warning-box {
+                padding: 24px;
+            }
+
+            .header {
+                padding: 60px 0 40px;
+            }
+
+            .content {
+                padding: 40px 0;
+            }
+
+            .section {
+                margin-bottom: 60px;
+            }
+
+            .nav {
+                margin: 20px 0;
+            }
+
+            .nav-button {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection styling */
+        ::selection {
+            background: rgba(90, 185, 234, 0.3);
+            color: #f5f5f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🎭</div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">MimixMe - AI Voice Cloning</p>
+            <p class="last-updated">Last Updated: February 4, 2026</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="index.html" class="nav-button back">← Back to Apps</a>
+            <a href="mimixme-privacy.html" class="nav-button active">Privacy Policy</a>
+            <a href="mimixme-terms.html" class="nav-button">Terms of Service</a>
+        </div>
+
+        <div class="content">
+            <div class="overview">
+                <h2>Privacy Policy Overview</h2>
+                <p>MimixMe is an AI-powered voice cloning application designed for entertainment purposes only. This Privacy Policy explains how we collect, use, process, and protect your information when you use our app.</p>
+                
+                <div class="highlight">
+                    <p><strong>The Short Version:</strong> We process voice recordings temporarily to create AI-generated voice clips. Voice profiles are stored locally on your device. When generating clips, audio is sent to our secure backend for AI processing, then immediately deleted. We don't share your data with advertisers or third parties for marketing.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Information We Collect</h2>
+
+                <h3>Voice Data You Provide</h3>
+                <ul>
+                    <li><strong>Voice Recordings:</strong> Audio samples you record or upload to create voice profiles (10 seconds maximum)</li>
+                    <li><strong>Reference Audio:</strong> Audio files stored locally on your device for voice cloning</li>
+                    <li><strong>Profile Information:</strong> Voice names and optional profile pictures you assign to each voice</li>
+                    <li><strong>Generated Clips:</strong> AI-generated audio clips created using the app, stored in your library</li>
+                </ul>
+
+                <h3>Data Processed During Generation</h3>
+                <div class="ai-box">
+                    <p><strong>AI Voice Cloning Process:</strong> When you generate a voice clip, we temporarily send your reference audio and text prompt to our secure backend server running Qwen3-TTS AI model. The audio is processed, the clip is generated, and all data is immediately deleted from our servers.</p>
+                </div>
+
+                <h3>Technical Data</h3>
+                <ul>
+                    <li><strong>Device Information:</strong> Device type, iOS version, app version</li>
+                    <li><strong>Usage Statistics:</strong> Number of generations used (to track free trial limit)</li>
+                    <li><strong>Crash Reports:</strong> Automatically collected crash logs to improve app stability</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>How We Use AI Technology</h2>
+
+                <h3>Voice Cloning AI</h3>
+                <p>MimixMe uses <strong>Qwen3-TTS</strong>, a state-of-the-art text-to-speech AI model, to clone voices:</p>
+                <ul>
+                    <li>Your reference audio is analyzed to extract voice characteristics</li>
+                    <li>The AI generates new speech in the cloned voice based on your text input</li>
+                    <li>Processing happens on our secure backend servers in Google Cloud</li>
+                    <li>Generated audio is returned to your device within 5-10 seconds</li>
+                    <li>All processing data is deleted immediately after generation</li>
+                </ul>
+
+                <div class="ai-box">
+                    <h3>Important: AI Limitations & Disclosure</h3>
+                    <ul>
+                        <li><strong>AI-Generated Content:</strong> All voice clips are clearly AI-generated and synthesized</li>
+                        <li><strong>Not Perfect Clones:</strong> Voice similarity varies based on audio quality and voice characteristics</li>
+                        <li><strong>Entertainment Only:</strong> This technology is for fun, comedy, and entertainment - not for impersonation or fraud</li>
+                        <li><strong>Audio Quality:</strong> Better source audio produces better results</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Data Storage and Security</h2>
+
+                <h3>Local Storage (On Your Device)</h3>
+                <div class="no-share-box">
+                    <ul>
+                        <li><strong>Voice Profiles:</strong> Stored permanently in your device's local file system</li>
+                        <li><strong>Generated Clips Library:</strong> Saved locally for playback and sharing</li>
+                        <li><strong>App Settings:</strong> Your preferences and subscription status</li>
+                        <li><strong>No Cloud Backup:</strong> We do not backup your voice data to any cloud service</li>
+                    </ul>
+                </div>
+
+                <h3>Temporary Backend Processing</h3>
+                <ul>
+                    <li><strong>Duration:</strong> Audio exists on our servers for 5-15 seconds during generation only</li>
+                    <li><strong>Encryption:</strong> All data transmitted over HTTPS with TLS encryption</li>
+                    <li><strong>Automatic Deletion:</strong> Files are immediately deleted after generation completes</li>
+                    <li><strong>No Logs:</strong> We do not log or store audio content from generations</li>
+                    <li><strong>Secure Infrastructure:</strong> Backend runs on Google Cloud Platform with enterprise security</li>
+                </ul>
+
+                <h3>Security Measures</h3>
+                <ul>
+                    <li>Industry-standard encryption for data in transit and at rest</li>
+                    <li>Secure API authentication to prevent unauthorized access</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Isolated processing - your data never mixes with other users</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>How We Use Your Information</h2>
+
+                <h3>Primary Uses</h3>
+                <ul>
+                    <li><strong>Voice Cloning:</strong> To generate AI voice clips based on your input</li>
+                    <li><strong>App Functionality:</strong> To provide voice profile management and clip library features</li>
+                    <li><strong>Usage Limits:</strong> To track free trial generations (3 free clips)</li>
+                    <li><strong>Subscription Management:</strong> To verify premium subscription status</li>
+                </ul>
+
+                <h3>Improvements and Analytics</h3>
+                <ul>
+                    <li>Analyze app usage patterns to improve features (anonymized data only)</li>
+                    <li>Fix bugs and crashes using crash reports</li>
+                    <li>Optimize AI model performance</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Information Sharing</h2>
+
+                <div class="no-share-box">
+                    <h3>We Do NOT Share, Sell, or Rent</h3>
+                    <ul>
+                        <li>Your voice recordings or generated clips</li>
+                        <li>Your personal information or contact details</li>
+                        <li>Your usage data with advertisers</li>
+                        <li>Any data for marketing purposes</li>
+                    </ul>
+                </div>
+
+                <h3>Limited Third-Party Services</h3>
+                <ul>
+                    <li><strong>Google Cloud Platform:</strong> Backend infrastructure for AI processing (secured)</li>
+                    <li><strong>Apple App Store:</strong> Subscription management and payment processing</li>
+                    <li><strong>Crash Analytics:</strong> Anonymized crash reports to improve app stability</li>
+                </ul>
+
+                <h3>Legal Requirements</h3>
+                <p>We may disclose information if required by law, court order, or to:</p>
+                <ul>
+                    <li>Comply with legal obligations</li>
+                    <li>Protect against fraud or security threats</li>
+                    <li>Enforce our Terms of Service</li>
+                    <li>Protect user safety and rights</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Your Rights and Choices</h2>
+
+                <h3>Data Control</h3>
+                <ul>
+                    <li><strong>Delete Voice Profiles:</strong> Long-press any voice and select "Delete"</li>
+                    <li><strong>Delete Generated Clips:</strong> Long-press any clip in your library and delete</li>
+                    <li><strong>Uninstall App:</strong> Removes all local data permanently</li>
+                    <li><strong>Microphone Access:</strong> Control permissions in iOS Settings → MimixMe</li>
+                    <li><strong>Photo Access:</strong> Control permissions for adding profile pictures</li>
+                </ul>
+
+                <h3>No Account Required</h3>
+                <ul>
+                    <li>MimixMe works without creating an account</li>
+                    <li>No email address, username, or password required</li>
+                    <li>No user tracking across devices</li>
+                    <li>Complete privacy by default</li>
+                </ul>
+
+                <h3>Subscription Management</h3>
+                <ul>
+                    <li>Manage or cancel subscription through iOS Settings → Apple ID → Subscriptions</li>
+                    <li>Subscription data handled by Apple - see Apple's Privacy Policy</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Prohibited Uses & Content Policy</h2>
+
+                <div class="warning-box">
+                    <h3>Strictly Prohibited</h3>
+                    <ul>
+                        <li><strong>Fraud or Impersonation:</strong> Using voice cloning to deceive or defraud others</li>
+                        <li><strong>Non-Consensual Use:</strong> Creating voice clips of people without their permission for harmful purposes</li>
+                        <li><strong>Illegal Content:</strong> Generating content that violates laws or promotes illegal activity</li>
+                        <li><strong>Harassment or Bullying:</strong> Creating content to harass, threaten, or bully individuals</li>
+                        <li><strong>Political Manipulation:</strong> Creating misleading political content or deepfakes</li>
+                        <li><strong>Commercial Impersonation:</strong> Impersonating public figures for commercial gain</li>
+                    </ul>
+                </div>
+
+                <h3>User Responsibility</h3>
+                <p>You are solely responsible for:</p>
+                <ul>
+                    <li>Obtaining consent before cloning someone's voice</li>
+                    <li>Using the app for entertainment and comedy only</li>
+                    <li>Complying with all applicable laws and regulations</li>
+                    <li>Respecting others' privacy and rights</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Age Restrictions</h2>
+                <p>MimixMe is rated <strong>17+</strong> due to the potential for mature content and misuse. Users must be at least 17 years old to use this app.</p>
+                <ul>
+                    <li>We do not knowingly collect information from anyone under 17</li>
+                    <li>If we discover a user is under 17, we will delete their data</li>
+                    <li>Parents should supervise use by minors</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Data Retention</h2>
+
+                <h3>Local Data (Your Device)</h3>
+                <ul>
+                    <li>Voice profiles and clips: Stored until you manually delete them</li>
+                    <li>App settings: Stored until app is uninstalled</li>
+                </ul>
+
+                <h3>Backend Processing Data</h3>
+                <ul>
+                    <li><strong>Retention Period:</strong> 0 seconds (immediate deletion after processing)</li>
+                    <li><strong>Temporary Files:</strong> Automatically deleted after each generation</li>
+                    <li><strong>No Logs:</strong> We do not retain logs of audio content</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>International Data Transfers</h2>
+                <p>Our backend servers are located in the United States (Google Cloud - us-east4 region). By using MimixMe, you consent to your data being processed in the United States.</p>
+                <p>We use appropriate safeguards to protect your data during international transfers, including encryption and secure infrastructure.</p>
+            </div>
+
+            <div class="section">
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify users of material changes by:</p>
+                <ul>
+                    <li>Updating the "Last Updated" date at the top of this policy</li>
+                    <li>Displaying an in-app notification</li>
+                    <li>Requiring acceptance of new terms for continued use</li>
+                </ul>
+                <p>Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+            </div>
+
+            <div class="section">
+                <h2>Third-Party Services</h2>
+
+                <h3>Google Cloud Platform</h3>
+                <p>Our backend AI processing runs on Google Cloud. Review their privacy policy: <a href="https://cloud.google.com/privacy" target="_blank">https://cloud.google.com/privacy</a></p>
+
+                <h3>Apple Services</h3>
+                <ul>
+                    <li><strong>App Store & Subscriptions:</strong> <a href="https://www.apple.com/privacy" target="_blank">https://www.apple.com/privacy</a></li>
+                    <li><strong>iOS Framework:</strong> Device-level privacy protections</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>California Privacy Rights (CCPA)</h2>
+                <p>If you are a California resident, you have the right to:</p>
+                <ul>
+                    <li><strong>Know:</strong> What personal information we collect and how we use it</li>
+                    <li><strong>Delete:</strong> Request deletion of your personal information</li>
+                    <li><strong>Opt-Out:</strong> Opt out of sale of personal information (Note: We don't sell data)</li>
+                    <li><strong>Non-Discrimination:</strong> Not be discriminated against for exercising these rights</li>
+                </ul>
+                <p>To exercise these rights, contact us at: boykingamedev@gmail.com</p>
+            </div>
+
+            <div class="section">
+                <h2>GDPR Rights (European Users)</h2>
+                <p>If you are in the European Economic Area, you have the right to:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request a copy of your personal data</li>
+                    <li><strong>Rectification:</strong> Correct inaccurate data</li>
+                    <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
+                    <li><strong>Portability:</strong> Transfer your data to another service</li>
+                    <li><strong>Object:</strong> Object to processing of your data</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this privacy policy or how we handle your data, please contact us:</p>
+            <p><strong>Email:</strong> boykingamedev@gmail.com</p>
+            <p><strong>App:</strong> MimixMe - AI Voice Cloning</p>
+            <p><strong>Developer:</strong> BoykinGameDev</p>
+        </div>
+
+        <div class="footer">
+            <p>MimixMe is designed for entertainment purposes only. Please use responsibly and respect others' privacy. This app should never be used for fraud, deception, or any illegal activities.</p>
+            <p style="margin-top: 16px;">Last Updated: February 4, 2026</p>
+        </div>
+    </div>
+</body>
+</html>
