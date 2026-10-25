@@ -150,6 +150,11 @@
             text-align: center;
         }
 
+        .content a {
+            color: #764ba2;
+            font-weight: 600;
+        }
+
         .effective-date {
             font-style: italic;
             color: #666;
@@ -187,87 +192,132 @@
         <div class="nav">
             <a href="index.html" class="nav-btn back">← Back to Apps</a>
             <a href="miniime-privacy.html" class="nav-btn active">Privacy Policy</a>
-            <a href="miniime-terms.html" class="nav-btn">Terms of Service</a>
+            <a href="miniime-terms.html" class="nav-btn">Terms of Use</a>
         </div>
 
         <div class="header">
             <h1>MiniiMe Privacy Policy</h1>
-            <p>Personal Journaling with AI Personas</p>
+            <p>A cozy pixel journal where you can talk to past you</p>
         </div>
 
         <div class="content">
-            <div class="effective-date">Effective Date: January 1, 2025</div>
-            
+            <div class="effective-date">Effective Date: October 25, 2026</div>
+
             <div class="highlight">
-                <strong>Privacy First Promise:</strong> MiniiMe is designed with privacy as the foundation. Your personal memories and journal entries remain private to you. We do not store, share, or sell your data to anyone.
+                <strong>The short version:</strong> Your journal lives on your iPhone and is backed up privately so you can get it back on a new phone. Memories are only sent to our AI partner (OpenAI) if you agree, and only to write your MiniiMe replies, titles and chapter summaries. Friends see only what you choose to share. We don't sell your data, show ads, or track you across other apps and websites.
             </div>
 
-            <h3>1. Information We Collect</h3>
-            <p><strong>Local Device Storage Only:</strong></p>
-            <ul>
-                <li>Journal entries (text and video)</li>
-                <li>User profile information (name, birth year)</li>
-                <li>App preferences and settings</li>
-                <li>Achievement and streak data</li>
-                <li>Custom tags and categories</li>
-            </ul>
-            
-            <p>All of this information is stored locally on your device using iOS Core Data and UserDefaults. We do not have access to this information.</p>
+            <h3>1. Who We Are</h3>
+            <p>MiniiMe is made by Colin Boykin ("we", "us"). This policy explains what MiniiMe collects, why, where it goes, and the choices you have. It applies to the MiniiMe iPhone app and the MiniiMe servers it talks to.</p>
 
-            <h3>2. How We Use Your Information</h3>
-            <p><strong>AI Processing Only:</strong></p>
+            <h3>2. What Stays on Your iPhone</h3>
+            <p>Everything you put into MiniiMe is stored on your device first, including:</p>
             <ul>
-                <li>When you chat with your MiniiMe personas, your journal entries are temporarily sent to OpenAI's API to generate responses</li>
-                <li>This data passes through OpenAI's servers only for the duration of processing your request</li>
-                <li>We do not store copies of your data on our servers</li>
-                <li>OpenAI processes the data according to their privacy policy and data usage terms</li>
+                <li>Memories you write, record or talk (Daily 30s, video memories, time capsules), plus their tags, dates, titles and summaries</li>
+                <li>Text versions of what you say in your videos. Speech is turned into text on your iPhone using Apple's speech recognition when your phone supports it</li>
+                <li>Your pixel MiniiMe, the places you've lived, and the people and pets you add to My Life</li>
+                <li>Songs you pick for a day, streaks, ranks, badges and app settings</li>
+                <li>A "voice profile" measured on your phone from your own memories (things like sentence length, punctuation and favorite phrases) so your MiniiMes sound like you</li>
+                <li>Your optional app passcode and security answers. These are never stored as written: only salted, one-way hashes are kept in your iPhone's Keychain, and they are never backed up or sent to us</li>
             </ul>
+            <p><strong>Photos and videos from your library:</strong> When MiniiMe has full access to your photo library, an attached photo or video is saved as a link to the item in your library (plus a small thumbnail), so it isn't copied or uploaded. Without full access, a copy is saved in MiniiMe and backed up like your other recordings.</p>
 
-            <h3>3. API Key Usage</h3>
+            <h3>3. Private Cloud Backup</h3>
+            <p>So you don't lose your journal, MiniiMe backs up your memories to our servers on Google Cloud (Firestore and Cloud Storage, in the United States). The backup includes:</p>
+            <ul>
+                <li>The text of your memories, video transcripts, titles, summaries, tags and songs</li>
+                <li>Videos you record in MiniiMe and any photos or videos copied into the app (videos are compressed on your phone before upload)</li>
+                <li>A random backup ID that links the backup to your install or account</li>
+            </ul>
+            <p>Backups are only readable by your account and are used only to restore your journal after a reinstall or on a new phone. Sealed time capsules are backed up too, but stay sealed in the app until their date. You can turn backup off at any time in Settings.</p>
+
+            <h3>4. Your Account</h3>
+            <p>Signing in is optional for journaling. If you create an account, you sign in with an <strong>email address or phone number and a password</strong> through Google Firebase Authentication. Phone numbers are used only as a sign-in name; we don't send text messages. An account lets your backup follow you to a new phone and is required to talk to your MiniiMes, because that uses AI on our servers.</p>
+
+            <h3>5. AI Features (Only With Your OK)</h3>
             <div class="highlight">
-                <p><strong>Important for Users with Custom API Keys:</strong></p>
-                <ul>
-                    <li>Users who provide their own OpenAI API key are subject to our rate limiting (10 messages per minute)</li>
-                    <li>API calls are made to OpenAI's current endpoints using models we select (currently GPT-4o-mini)</li>
-                    <li>You are choosing to use whatever AI models we have configured in the app</li>
-                    <li>Your API usage will be billed directly by OpenAI to your account</li>
-                    <li>We do not monitor or log your API key usage beyond rate limiting</li>
-                </ul>
+                <p>Before anything is sent, MiniiMe shows a screen explaining what is shared and with whom, and asks for your permission. You can change this at any time in <strong>Settings &gt; AI &amp; Privacy</strong>.</p>
             </div>
-
-            <h3>4. Data Sharing and Third Parties</h3>
-            <p><strong>We do not share your data with anyone except:</strong></p>
+            <p>When AI is on, the memories that are relevant to a request, your voice profile, and the names of people in your story are sent through our server to <strong>OpenAI</strong> to:</p>
             <ul>
-                <li><strong>OpenAI:</strong> Only for AI conversation processing. Data is not stored by OpenAI per their API terms.</li>
-                <li><strong>Apple:</strong> Subscription information is handled by Apple's App Store per their privacy policy.</li>
+                <li>Write replies when you talk to your MiniiMe from a past year</li>
+                <li>Write My Life chapter summaries</li>
+                <li>Write titles and short summaries for memories and videos</li>
             </ul>
-            <p>We do not use analytics services, advertising networks, or any other third-party services that would access your personal data.</p>
+            <p>If a friend shared a memory with you and it's part of a conversation, that shared memory may be included as well. Sealed time capsules are never sent. Our OpenAI key stays on our server, never in the app. Under OpenAI's API terms, data sent through the API is not used to train their models; OpenAI may keep it for a limited time for abuse monitoring, as described in their own privacy policy. We keep a count of how many chat messages you send each day to prevent abuse, not the messages themselves.</p>
 
-            <h3>5. Data Security</h3>
+            <h3>6. Friends and Shared Memories</h3>
+            <p>Friends on MiniiMe is small and private, not a social network:</p>
             <ul>
-                <li>All data stored locally on your device is protected by iOS security features</li>
-                <li>API communications use HTTPS encryption</li>
-                <li>We do not maintain servers that store user data</li>
-                <li>If you delete the app, all your data is permanently removed from your device</li>
-            </ul>
-
-            <h3>6. Your Rights</h3>
-            <ul>
-                <li><strong>Data Control:</strong> You have complete control over your data since it's stored on your device</li>
-                <li><strong>Deletion:</strong> Delete individual entries or all data at any time in the app</li>
-                <li><strong>Export:</strong> Data is stored in standard iOS formats accessible through device backups</li>
-                <li><strong>API Control:</strong> You can remove or change your custom API key at any time</li>
+                <li>You add someone with their friend code, and you're only friends once both of you say yes</li>
+                <li>Friends see only your name, your pixel MiniiMe, and the memories you choose to share with them</li>
+                <li>A shared memory appears in a friend's timeline only if they accept it, and you can take it back at any time</li>
+                <li>A shared memory's song, photos and videos are shown to your friend through short-lived, view-only links to your private backup. Nothing is copied into their backup, and the links stop working if you unfriend them or take the memory back. Photos may be cached on their phone so they load quickly, and that cache is cleared when the memory is taken back</li>
+                <li>Friend notifications never include what a memory says, so nothing private shows on a lock screen</li>
             </ul>
 
-            <h3>7. Children's Privacy</h3>
-            <p>MiniiMe is designed for users of all ages. We do not knowingly collect any personal information from children, as all data remains on the user's device.</p>
+            <h3>7. Songs</h3>
+            <p>When you search Apple Music in the app, only your search words are sent, directly to Apple. If you paste a YouTube, YouTube Music, Spotify or Apple Music link, MiniiMe asks that service for the song's name, and the song plays in the service's own player only when you tap play. Those services may collect information under their own privacy policies when their player loads.</p>
 
-            <h3>8. Changes to Privacy Policy</h3>
-            <p>We will notify users of any material changes to this privacy policy through app updates and on this website.</p>
+            <h3>8. Anonymous Usage Counts</h3>
+            <p>MiniiMe can send simple counts of which features get used (for example, how many Daily 30s are filmed versus typed). These are event names and small labels only, never anything you wrote, said or recorded, and are not used for advertising or tracking. You can turn them off in <strong>Settings &gt; AI &amp; Privacy</strong>.</p>
+
+            <h3>9. Feedback</h3>
+            <p>If you send feedback from Settings, we receive your message along with your account email (if any), app version and device model so we can follow up and fix problems. Only we read it.</p>
+
+            <h3>10. Purchases</h3>
+            <p>Payments are handled entirely by Apple. We never see your payment details. To confirm your MiniiMe Yearly plan, the app sends your App Store transaction information to our server, which checks it with Apple. We also note when your account was created so we know when your free first month ends.</p>
+
+            <h3>11. Permissions</h3>
+            <ul>
+                <li><strong>Camera and microphone:</strong> only when you choose to record a video or talk in a Daily 30</li>
+                <li><strong>Speech recognition:</strong> to turn what you say into text on your iPhone</li>
+                <li><strong>Photos:</strong> to attach photos and videos you pick</li>
+                <li><strong>Notifications:</strong> for your Daily 30 reminder, time capsules that open, and friend requests or shared memories</li>
+                <li><strong>Apple Music (optional):</strong> to play full songs if you subscribe to Apple Music</li>
+            </ul>
+            <p>MiniiMe does not access your contacts or location.</p>
+
+            <h3>12. Who We Share Data With</h3>
+            <p>We do not sell or rent your data, and we don't use advertising networks. We share data only with the service providers needed to run MiniiMe:</p>
+            <ul>
+                <li><strong>Google Cloud and Firebase:</strong> hosting, backup storage and sign-in</li>
+                <li><strong>OpenAI:</strong> AI replies, titles and summaries, only when you've agreed</li>
+                <li><strong>Apple:</strong> purchases, notifications, speech recognition and Apple Music</li>
+                <li><strong>Friends you choose:</strong> only the memories you share with them</li>
+            </ul>
+            <p>We may also disclose information if required by law or to protect the safety of our users.</p>
+
+            <h3>13. Security</h3>
+            <ul>
+                <li>All communication with our servers uses HTTPS encryption</li>
+                <li>Your sign-in session is kept in your iPhone's Keychain</li>
+                <li>Your backup is tied to your account, and shared media is only reachable through short-lived links</li>
+                <li>An optional passcode (and Face ID) can lock the app, and the journal is hidden in the app switcher</li>
+            </ul>
+            <p>No system is perfectly secure, but we work to protect your information.</p>
+
+            <h3>14. How Long We Keep Data</h3>
+            <p>Your backup is kept as long as you have backup on or keep your account. When you delete a memory, it's removed from your backup too. Daily usage counters used for rate limits expire after a few days. When you delete your account, your backup and friend data are deleted from our servers.</p>
+
+            <h3>15. Your Choices and Rights</h3>
+            <ul>
+                <li><strong>Delete memories:</strong> any time, in the app</li>
+                <li><strong>Turn off AI or usage counts:</strong> Settings &gt; AI &amp; Privacy</li>
+                <li><strong>Turn off backup:</strong> in Settings</li>
+                <li><strong>Delete your account:</strong> Settings &gt; Account &gt; Delete account. This deletes your sign-in, your cloud backup (text, videos and photos), your friend code, friendships and anything you've shared. Memories on your iPhone stay unless you delete them or the app</li>
+                <li><strong>Access or other requests:</strong> email us and we'll help, including requests under laws like the GDPR or CCPA</li>
+            </ul>
+
+            <h3>16. Children</h3>
+            <p>MiniiMe is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has given us information, contact us and we will delete it. Purchases made through Apple's Ask to Buy need a parent or guardian's approval.</p>
+
+            <h3>17. Changes to This Policy</h3>
+            <p>We'll post any changes on this page and update the effective date. For material changes, we'll also let you know in the app.</p>
 
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                <p>If you have questions about this Privacy Policy, please contact:</p>
+                <p>If you have questions about this Privacy Policy or your data, please contact:</p>
                 <p><strong>Colin Boykin</strong><br>
                 Email: boykingamedev@gmail.com</p>
             </div>
